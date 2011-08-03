@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project default="run_tests" name="Create Runnable Jar for Project QnetTests">
+    <!--this file was created by Eclipse Runnable JAR Export Wizard-->
+    <!--ANT 1.7 is required                                        -->
+    <target name="build_tests">
+        <delete file="build/JavaTesting4PHP.jar" />
+        <jar destfile="build/JavaTesting4PHP.jar" filesetmanifest="mergewithoutmain">
+            <manifest>
+                <attribute name="Main-Class" value="jt4p.JavaTesting4PHP"/>
+                <attribute name="Class-Path" value="."/>
+            </manifest>
+            <fileset dir="output"/>
+        </jar>
+    </target>
+
+    <target name="run_tests" description="Run tests" depends="build_tests">
+        <exec executable="java">
+            <arg line="-jar build/JavaTesting4PHP.jar C:\...\htdocs\Qnet\src\test\resources" />
+        </exec>
+    </target>
+</project>
