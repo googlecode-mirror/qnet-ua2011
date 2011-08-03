@@ -1,1 +1,0 @@
-http://localhost/Qnet/src/test/resources
