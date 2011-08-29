@@ -14,7 +14,6 @@ namespace Qnet\Controller;
     if ($searchQuery != null) {
         $userDaoIns = new QueryDAO();
         $queriesArray = $userDaoIns->getQueriesByPartialString($searchQuery);
-        $queriesArray = $queriesArray[0];
 
 		$uid = getUID();
 		$udao = new UserDAO();

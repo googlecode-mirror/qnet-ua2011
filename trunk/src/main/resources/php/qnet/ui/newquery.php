@@ -9,6 +9,7 @@ use Qnet\Controller\ProfileController;
 use Qnet\Controller\PhotoController;
 use Qnet\Model\User;
 $photoController=new PhotoController();
+$photoPath=$photoController->getPhoto();
 
 ?>
 <body onload="addqbox()">

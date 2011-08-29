@@ -2,8 +2,6 @@
 namespace Qnet\Dao;
 
     require_once dirname(__FILE__) . '\..\util.php';
-	require_dao('userDAO');
-    use Qnet\Dao\UserDAO;
     require_db();
 
     class CommentDAO {
@@ -21,24 +19,19 @@ namespace Qnet\Dao;
         public function loadAllComments($qId) {
             $connector = new DBConnector();
             $connection = $connector->createConnection();
-            $result = mysql_query("SELECT * FROM comment WHERE FK_queryId='$qId' ORDER BY date") or die ("Error"); //TODO DATE
-            $titles = array();
-            $dates = array();
-            $names = array();
-
-            $udao = new UserDAO();
-
+            $result = mysql_query("SELECT * FROM comment WHERE FK_queryId='$qId'") or die ("Error"); //TODO DATE
+            $ans = array();
             while($row = mysql_fetch_assoc($result)) {
-                $titles[$row['id']] = $row['text'];
-                $dates[$row['id']] = $row['date'];
-                $uid = $row['FK_userId'];
-                $names[$row['id']] = $udao->selectUserNameById($uid);
+                $ans[$row['id']] = $row['text'];
             }
             mysql_free_result($result);
             mysql_close($connection);
 
-            return array($titles, $dates, $names);
+            return $ans;
+
+
         }
+
     }
 
     ?>

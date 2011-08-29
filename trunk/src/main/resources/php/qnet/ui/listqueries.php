@@ -11,6 +11,9 @@ use Qnet\Controller\ListQueriesController;
 $controller = new ListQueriesController();
 use Qnet\Controller\PhotoController;
 $photoController=new PhotoController();
+$photoPath=$photoController->getPhoto();
+
+
 
 ?>
 

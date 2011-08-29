@@ -1,8 +1,8 @@
 <?php
-
 namespace Qnet\Dao;
     require_once dirname(__FILE__) . '\..\util.php';
     require_db();
+
 
     class photoDAO {
 

@@ -80,8 +80,7 @@ class ProfileController {
         $this->qdao = new QueryDAO();
         $queriesDateStructure = $this->qdao->getQueriesByUserId($this->theuid);
         $this->queries = $queriesDateStructure[0];
-        $loggedUser = $this->udao->selectUserById(getUID());
-        $this->filteredQueries = array_keys(ListQueriesController::filterQueries($this->queries, $loggedUser));
+        $this->filteredQueries = array_keys(ListQueriesController::filterQueries($this->queries, $this->theuser));
         $this->queriesDates = array_values($queriesDateStructure[1]);
         $this->sdao = new StatisticsDAO();
         $statisticDateStructure = $this->sdao->getStatisticsByUserId($this->theuid);
@@ -223,7 +222,7 @@ class ProfileController {
     }
 
     public function hasMoreComments() {
-        return $this->commentIx+1 < count($this->comments[0]);
+        return $this->commentIx+1 < count($this->comments);
     }
 
     public function nextQuestion() {
@@ -234,21 +233,13 @@ class ProfileController {
 
     public function nextComment() {
         $this->commentIx++;
-        $ids = array_keys($this->comments[0]);
+        $ids = array_keys($this->comments);
         $this->commentId = $ids[$this->commentIx];
     }
 
     public function getCommentText() {
-        return $this->comments[0][$this->commentId];
+        return $this->comments[$this->commentId];
     }
-
-	public function getCommentUser() {
-		return $this->comments[2][$this->commentId];
-	}
-
-	public function getCommentDate() {
-		return $this->comments[1][$this->commentId];
-	}
 
     public function getQuestionName() {
         return $this->questions[$this->questionId];
