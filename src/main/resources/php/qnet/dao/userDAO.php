@@ -8,25 +8,6 @@ use Qnet\Model\User;
 
 class UserDAO {
 
-	public function selectUserNameById($uid) {
-	    $connector = new DBConnector();
-	    $connection = $connector->createConnection();
-
-	    $query = 'SELECT name, lastname FROM users u WHERE u.alive=1 AND u.id='.$uid;
-	    $result = mysql_query($query) or die ("Error in query: $query. " . mysql_error());
-	    if(!$result || mysql_num_rows($result) == 0) {
-	        return false;
-	    }
-	    $data = mysql_fetch_assoc($result);
-	    $name = $data['name'];
-	    $lastname = $data['lastname'];
-	    mysql_free_result($result);
-	    mysql_close($connection);
-
-		return $name. ' '.$lastname;
-	}
-
-
     public function selectUserById($userId) {
         $connector = new DBConnector();
         $connection = $connector->createConnection();

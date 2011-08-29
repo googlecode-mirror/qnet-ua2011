@@ -15,12 +15,7 @@
     }
     while ($controller->hasMoreComments()) {
         $controller->nextComment();
-
-	echo '<div class="comment"><fieldset>
-            <legend>'.$controller->getCommentUser().' ('.$controller->getCommentDate().')</legend>';
-            echo '<p class="centerText" >' . $controller->getCommentText() . '<p>';
-    echo '</fieldset></div>';
-
+        echo '<div class="comment"> <p class="centerText" >' . $controller->getCommentText() . '<p> </div>';
     }
     echo '<div class="toComment" >
         <form action="bridge.php?target=commentController" method="post">

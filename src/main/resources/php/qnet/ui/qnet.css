@@ -442,6 +442,8 @@ hr { display: none; }
 .searchButton:hover		{ background: white; color: black; }
 
 .comment{
+        border-style:solid;
+        border-color:white;
         text-align:center;
 }
 .centerText{ text-align:center;} 

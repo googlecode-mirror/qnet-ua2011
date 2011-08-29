@@ -236,6 +236,7 @@ class User {
         $this->InstitutionName = $InstitutionName;
         $this->country = $country;
         $this->religion = $religion;
+        $this->photo = $photo;
         $this->alive = $alive;
     }
 
@@ -250,6 +251,7 @@ class User {
     public function getPhoto() {
         return $this->photo;
     }
+
 }
 
 User::init();

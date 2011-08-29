@@ -111,8 +111,12 @@ function getUrlVars()
 }
 
 function showError(){
-	var hasError = getUrlVars()["error"];
-    if(hasError){
-        alert("You must use a jpg file");
+         var hasError = getUrlVars()["error"];
+
+    if((!hasError)&& hasError!=undefined){
+
+    alert("You must use a jpg file");
     }
+
+
 }

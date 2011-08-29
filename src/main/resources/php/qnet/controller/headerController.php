@@ -4,8 +4,6 @@ namespace Qnet\Controller;
 require_once dirname(__FILE__) . '\..\util.php';
 require_dao('trackingsDAO');
 require_dao('userDAO');
-require_dao("photoDAO");
-use Qnet\dao\photoDAO;
 use Qnet\Dao\UserDAO;
 use Qnet\Dao\TrackingsDAO;
 
@@ -80,8 +78,7 @@ class HeaderController {
     }
 
     public function getUserPhoto() {
-	    $photoDao=new PhotoDao();
-	    return $photoDao->getPhotoByUserId($this->theuid);
+        return $this->theuser->getPhoto();
     }
 
     public function getFollowers() {

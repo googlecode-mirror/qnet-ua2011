@@ -8,8 +8,9 @@
         use Qnet\Controller\PhotoController;
         $controller = new ProfileController();
         $photoController=new PhotoController();
+        $photoPath=$photoController->getPhoto();
         $hasError=$_GET['error'];
-		$isViewProfile = true;
+        //$message=$photoController->getMessage($hasError);
     ?>
 <body >
 <div id="wrapper">
