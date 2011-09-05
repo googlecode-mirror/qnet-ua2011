@@ -15,7 +15,7 @@
 
     <target name="run_tests" description="Run tests" depends="build_tests">
         <exec executable="java">
-            <arg line="-jar build/JavaTesting4PHP.jar C:\...\htdocs\Qnet\src\test\resources" />
+            <arg line="-jar build/JavaTesting4PHP.jar C:\xampp\htdocs\Qnet\src\test\resources" />
         </exec>
     </target>
 </project>
