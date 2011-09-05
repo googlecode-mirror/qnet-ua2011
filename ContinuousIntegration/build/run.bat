@@ -1,1 +1,1 @@
-java -jar "C:\xampp\xampp\htdocs\Qnet\ContinuousIntegration\build\JavaTesting4PHP.jar" "C:\xampp\xampp\htdocs\Qnet\src\test\resources"
+java -jar "C:\xampp\htdocs\Qnet\ContinuousIntegration\build\JavaTesting4PHP.jar" "C:\xampp\htdocs\Qnet\src\test\resources"
