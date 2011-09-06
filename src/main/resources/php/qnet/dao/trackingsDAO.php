@@ -123,7 +123,9 @@ class TrackingsDAO {
         $date = date('Y-m-d H:i:s');
         $query = "INSERT INTO trackings (followedId, followerId, approved, notified, date) VALUES ($followed, $follower, 0, 0, '$date')";
         mysql_query($query) or die ("Error");
+        $tid = mysql_insert_id();
         mysql_close($connection);
+        return $tid;
     }
 
 }

@@ -7,7 +7,7 @@ require_model('User');
 use Qnet\Dao\TrackingsDAO;
 use Qnet\Model\User;
 
-		 $trackingDAO = new TrackingsDAO();
+		$trackingDAO = new TrackingsDAO();
 		$trackingDAO->unfollowUser(1,2);
 		$results =$trackingDAO->getFollowed(2);  //a QUIEN SIGUE 2
 		if(array_search("1",$results)!=null){
