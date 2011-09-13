@@ -9,10 +9,12 @@ class CommentDAO
 
     public function saveComment($qId, $uId, $text)
     {
+        $textAux = mysql_real_escape_string($text);
+
         $connector = new DBConnector();
         $connection = $connector->createConnection();
         $date = date('Y-m-d H:i:s');
-        $query = "INSERT INTO comment (text,FK_userId,FK_queryId, date) VALUES ('$text','$uId','$qId', '$date')";
+        $query = "INSERT INTO comment (text,FK_userId,FK_queryId, date) VALUES ('$textAux','$uId','$qId', '$date')";
         mysql_query($query) or die("Error in query: $query. " . mysql_error());
         $lastId = mysql_insert_id();
         mysql_close($connection);
