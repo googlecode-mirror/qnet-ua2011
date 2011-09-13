@@ -23,6 +23,10 @@ function require_dao($name) {
     use_prefix('dao', $name);
 }
 
+function require_service($name) {
+    use_prefix('service', $name);
+}
+
 function require_controller($name) {
     use_prefix('controller', $name);
 }
