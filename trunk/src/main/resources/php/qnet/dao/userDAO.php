@@ -21,7 +21,7 @@ class UserDAO {
         $name = $data['name'];
         $lastname = $data['lastname'];
         $password = $data['password'];
-        $alive = $data['alive']; 
+        $alive = $data['alive'];
         mysql_free_result($result);
 		$id=intval($userId);
         $query = 'SELECT * FROM userinfo u WHERE u.FK_users='.$userId;
@@ -54,8 +54,11 @@ VALUE ($uid, '$user->birth','$user->gender','$user->maritalSt','$user->studies',
 	public function getUserIdByUserAndPass($name , $pass){
         $connector = new DBConnector();
         $connection = $connector->createConnection();
+        $nameAux = mysql_real_escape_string($name);
+        $passAux = mysql_real_escape_string($pass);
 
-        $query = 'SELECT id FROM users u WHERE u.name="'.$name.'" AND u.password="'.$pass.'" AND u.alive=1';
+
+        $query = 'SELECT id FROM users u WHERE u.name="'.$nameAux.'" AND u.password="'.$passAux.'" AND u.alive=1';
 
         $result = mysql_query($query) or die ("Error in query: $query. " . mysql_error());
 
@@ -73,9 +76,11 @@ VALUE ($uid, '$user->birth','$user->gender','$user->maritalSt','$user->studies',
 	public function getUserIdByLastName($userLastName){
 		$connector = new DBConnector();
         $connection = $connector->createConnection();
-		$userName = strtok($userLastName, " ");
+        $userLastNameAux = mysql_real_escape_string($userLastName);
+
+		$userName = strtok($userLastNameAux, " ");
 		$userLastName = strtok(" ");
-		$query = "SELECT * FROM users u WHERE u.alive=1 AND u.name='" . $userName .  "' AND u.lastname='" . $userLastName . "'";
+		$query = "SELECT * FROM users u WHERE u.alive=1 AND u.name='" . $userName .  "' AND u.lastname='" . $userLastNameAux . "'";
 		$result = mysql_query($query) or die ("Error in query: $query. " . mysql_error());
 		if(!$result || mysql_num_rows($result) == 0){
 			return -1;
@@ -101,12 +106,14 @@ VALUE ($uid, '$user->birth','$user->gender','$user->maritalSt','$user->studies',
         mysql_query($query) or die ("Error in query: $query. " . mysql_error());
         mysql_close($connection);
     }
-    
+
 	public function getUsersByPartialString($partialName){
 		$connector = new DBConnector();
         $connection = $connector->createConnection();
+        $partialNameAux = mysql_real_escape_string($partialName);
 
-		$query = 'SELECT name,lastname FROM users u WHERE u.alive=1 AND u.name LIKE "' .$partialName .'%"';
+
+		$query = 'SELECT name,lastname FROM users u WHERE u.alive=1 AND u.name LIKE "' .$partialNameAux .'%"';
 		$result = mysql_query($query);
 		if(mysql_num_rows($result) == 0){
 			return -1;

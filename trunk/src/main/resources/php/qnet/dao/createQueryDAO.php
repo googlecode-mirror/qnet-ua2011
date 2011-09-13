@@ -37,22 +37,26 @@ class CreateQueryDAO {
 	}
 
     public function persistQuestion($text) {
-        return $this->persistQuestionIntoQuery($text, $this->last_query_id);
+        $textAux = mysql_real_escape_string($text);
+        return $this->persistQuestionIntoQuery($textAux, $this->last_query_id);
     }
 
     public function persistQuestionIntoQuery($text, $queryID) {
-        $query = "INSERT INTO question (text, FK_queries) VALUES ('$text', '$queryID')";
+        $textAux = mysql_real_escape_string($text);
+        $query = "INSERT INTO question (text, FK_queries) VALUES ('$textAux', '$queryID')";
         mysql_query($query) or die ("Error in query: $query. " . mysql_error());
         $this->last_question_id = mysql_insert_id();
         return $this->last_question_id;
     }
 
     public function persistAnswer($text, $number) {
-        return $this->persistAnswerIntoQuestion($text, $number, $this->last_question_id);
+        $textAux = mysql_real_escape_string($text);
+        return $this->persistAnswerIntoQuestion($textAux, $number, $this->last_question_id);
     }
 
     public function persistAnswerIntoQuestion($text, $number, $questionID) {
-        $query = "INSERT INTO qoption (text, number, FK_question) VALUES ('$text', '$number', '$questionID')";
+        $textAux = mysql_real_escape_string($text);
+        $query = "INSERT INTO qoption (text, number, FK_question) VALUES ('$textAux', '$number', '$questionID')";
         mysql_query($query) or die ("Error in query: $query. " . mysql_error());
         return mysql_insert_id();
     }
