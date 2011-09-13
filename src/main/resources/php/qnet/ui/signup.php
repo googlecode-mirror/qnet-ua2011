@@ -1,4 +1,32 @@
 <?php include "fragment/insecureHead.php"; ?>
+<?php
+/*
+$_SESSION["completeForm"]=true;
+    $_SESSION["userName"]=$_POST["userName"];
+    $_SESSION["userLastName"]=$_POST["userLastName"];
+    $_SESSION["day"]=$_POST["day"];
+*/
+
+
+echo "</br>";
+
+$completeForm = $_SESSION["completeForm"];
+$emptyValue = "";
+$defaultUserName = $emptyValue;
+$defaultUserLastName = $emptyValue;
+$DefaultInstitutionName = $emptyValue;
+
+if ($completeForm) {
+    $defaultUserName = $_SESSION["userName"];
+    $defaultUserLastName = $_SESSION["userLastName"];
+    $DefaultInstitutionName = $_SESSION["institutionName"];
+}
+
+//TODO Print errors
+//print_r($_SESSION["errors"]);
+
+?>
+
 <body>
 <div id="wrapper">
 <?php
@@ -19,11 +47,14 @@ use Qnet\Model\User;
 <fieldset>
     <legend>Personal information</legend>
     <div><label for="userName" class="mylabelstyle">Name:</label><input type="text" name="userName"
-                                                                        id="userName"/>
+                                                                        id="userName"
+                                                                        value="<?php echo $defaultUserName;?>"/>
     </div>
-    <div><label for="userLasName" class="mylabelstyle">Last name:</label><input type="text"
-                                                                                name="userLastName"
-                                                                                id="userLasName"/></div>
+    <div><label for="userLastName" class="mylabelstyle">Last name:</label><input type="text"
+                                                                                 name="userLastName"
+                                                                                 id="userLastName"
+                                                                                 value="<?php echo $defaultUserLastName;?>"/>
+    </div>
     <div><label for="password" class="mylabelstyle">Password:</label><input type="password" name="password"
                                                                             id="password"/></div>
     <div><label for="rePassword" class="mylabelstyle">Retype Password:</label><input type="password"
@@ -49,8 +80,8 @@ use Qnet\Model\User;
     </div>
     <div>
         <label class="mylabelstyle" for="institutionName">Institution name:</label>
-        <input type="text" name="InstitutionName" id="InstitutionName"
-               value="<?php echo $institutionName ?>"/>
+        <input type="text" name="institutionName" id="institutionName"
+               value="<?php echo $DefaultInstitutionName ?>"/>
     </div>
 </fieldset>
 <fieldset>
@@ -114,6 +145,28 @@ use Qnet\Model\User;
 
 <p>
 
+    <<<<<<< .mine
+    We do our best to keep Facebook safe, but we cannot guarantee it. We need your help to do that, which
+    includes the following commitments:
+    1. You will not send or otherwise post unauthorized commercial communications (such as spam) on
+    Facebook.
+    2. You will not collect users' content or information, or otherwise access Facebook, using automated
+    means (such as harvesting bots, robots, spiders, or scrapers) without our permission.
+    3. You will not engage in unlawful multi-level marketing, such as a pyramid scheme, on Facebook.
+    4. You will not upload viruses or other malicious code.
+    5. You will not solicit login information or access an account belonging to someone else.
+    6. You will not bully, intimidate, or harass any user.
+    7. You will not post content that: is hateful, threatening, or pornographic; incites violence; or
+    contains nudity or graphic or gratuitous violence.
+    8. You will not develop or operate a third-party application containing alcohol-related or other mature
+    content (including advertisements) without appropriate age-based restrictions.
+    9. You will follow our Promotions Guidelines and all applicable laws if you publicize or offer any
+    contest, giveaway, or sweepstakes (ï¿½promotionï¿½) on Facebook.
+    10. You will not use Facebook to do anything unlawful, misleading, malicious, or discriminatory.
+    11. You will not do anything that could disable, overburden, or impair the proper working of Facebook,
+    such as a denial of service attack.
+    12. You will not facilitate or encourage any violations of this Statement.
+    =======
     We do our best to keep Qnet safe, but we cannot guarantee it. We need your help to do that, which
     includes the following commitments:
     1. You will not send or otherwise post unauthorized commercial communications (such as spam) on
@@ -129,11 +182,12 @@ use Qnet\Model\User;
     8. You will not develop or operate a third-party application containing alcohol-related or other mature
     content (including advertisements) without appropriate age-based restrictions.
     9. You will follow our Promotions Guidelines and all applicable laws if you publicize or offer any
-    contest, giveaway, or sweepstakes (“promotion”) on Qnet.
+    contest, giveaway, or sweepstakes (ï¿½promotionï¿½) on Qnet.
     10. You will not use Qnet to do anything unlawful, misleading, malicious, or discriminatory.
     11. You will not do anything that could disable, overburden, or impair the proper working of Qnet,
     such as a denial of service attack.
     12. You will not facilitate or encourage any violations of this Statement.
+    >>>>>>> .r38
 
 </p>
 
@@ -231,7 +285,7 @@ use Qnet\Model\User;
     1. You will only request data you need to operate your application.
     2. You will have a privacy policy that tells users what user data you are going to use and how you will use,
     display, share, or transfer that data and you will include your privacy policy URL in the Developer Application.
-    3. You will not use, display, share, or transfer a user’s data in a manner inconsistent with your privacy policy.
+    3. You will not use, display, share, or transfer a userï¿½s data in a manner inconsistent with your privacy policy.
     4. You will delete all data you receive from us concerning a user if the user asks you to do so, and will provide a
     mechanism for users to make such a request.
     5. You will not include data you receive from us concerning a user in any advertising creative.
@@ -240,7 +294,7 @@ use Qnet\Model\User;
     that transfer or use.
     7. You will not sell user data. If you are acquired by or merge with a third party, you can continue to use user
     data within your application, but you cannot transfer user data outside of your application.
-    8. We can require you to delete user data if you use it in a way that we determine is inconsistent with users’
+    8. We can require you to delete user data if you use it in a way that we determine is inconsistent with usersï¿½
     expectations.
     9. We can limit your access to data.
     10. You will comply with all other restrictions contained in our Qnet Platform Policies.
@@ -378,7 +432,7 @@ use Qnet\Model\User;
     RESPONSIBLE FOR THE ACTIONS, CONTENT, INFORMATION, OR DATA OF THIRD PARTIES, AND YOU RELEASE US, OUR DIRECTORS,
     OFFICERS, EMPLOYEES, AND AGENTS FROM ANY CLAIMS AND DAMAGES, KNOWN AND UNKNOWN, ARISING OUT OF OR IN ANY WAY
     CONNECTED WITH ANY CLAIM YOU HAVE AGAINST ANY SUCH THIRD PARTIES. IF YOU ARE A CALIFORNIA RESIDENT, YOU WAIVE
-    CALIFORNIA CIVIL CODE §1542, WHICH SAYS: A GENERAL RELEASE DOES NOT EXTEND TO CLAIMS WHICH THE CREDITOR DOES NOT
+    CALIFORNIA CIVIL CODE ï¿½1542, WHICH SAYS: A GENERAL RELEASE DOES NOT EXTEND TO CLAIMS WHICH THE CREDITOR DOES NOT
     KNOW OR SUSPECT TO EXIST IN HIS FAVOR AT THE TIME OF EXECUTING THE RELEASE, WHICH IF KNOWN BY HIM MUST HAVE
     MATERIALLY AFFECTED HIS SETTLEMENT WITH THE DEBTOR. WE WILL NOT BE LIABLE TO YOU FOR ANY LOST PROFITS OR OTHER
     CONSEQUENTIAL, SPECIAL, INDIRECT, OR INCIDENTAL DAMAGES ARISING OUT OF OR IN CONNECTION WITH THIS STATEMENT OR QNET,
@@ -431,7 +485,7 @@ use Qnet\Model\User;
 
 <p>1. If you are a resident of or have your principal place of business in the US or Canada, this Statement is an
     agreement between you and Qnet, Inc. Otherwise, this Statement is an agreement between you and Qnet Ireland Limited.
-    References to “us,” “we,” and “our” mean either Qnet, Inc. or Qnet Ireland Limited, as appropriate.
+    References to ï¿½us,ï¿½ ï¿½we,ï¿½ and ï¿½ourï¿½ mean either Qnet, Inc. or Qnet Ireland Limited, as appropriate.
     2. This Statement makes up the entire agreement between the parties regarding Qnet, and supersedes any prior
     agreements.
     3. If any portion of this Statement is found to be unenforceable, the remaining portion will remain in full force
@@ -453,11 +507,32 @@ use Qnet\Model\User;
 </div>
 <div class="mylabelstyle">
     <p></p>
-    <input type="checkbox" name="agreement"  value="YES">
+    <input type="checkbox" name="agreement" value="YES">
     &nbsp; Yes, I accept the above Terms &amp; Conditions.
 
 </div>
 </fieldset>
+
+<fieldset>
+    <legend>Security</legend>
+    <img id="captcha" src="../external/captcha/securimage_show.php" alt="CAPTCHA Image"/>
+    <br>
+    <a href="#"
+       onclick="document.getElementById('captcha').src = '../external/captcha/securimage_show.php?' + Math.random(); return false">[
+        Refresh ]</a>
+<!--    <object type="application/x-shockwave-flash"-->
+<!--            data="../external/captcha/securimage_play.swf?audio=../external/captcha/securimage_play.php&amp;bgColor1=#fff&amp;bgColor2=#fff&amp;iconColor=#777&amp;borderWidth=1&amp;borderColor=#000"-->
+<!--            width="19" height="19">-->
+<!---->
+<!--        <param name="movie"-->
+<!--               value="../external/captcha/securimage_play.swf?audio=../external/captcha//securimage_play.php&amp;bgColor1=#fff&amp;bgColor2=#fff&amp;iconColor=#777&amp;borderWidth=1&amp;borderColor=#000"/>-->
+<!---->
+<!--    </object>-->
+    <br/> <br/>
+    <input type="text" name="captcha_code" size="10" maxlength="6"/>
+
+</fieldset>
+
 <div><input id="submitSignUpButton" class="summitQuery" type="submit"></div>
 </form>
 </div>
