@@ -42,7 +42,7 @@
     <MoveCompletedEndsForward>0</MoveCompletedEndsForward>
     <BaselineForEarnedValue>0</BaselineForEarnedValue>
     <AutoAddNewResourcesAndTasks>1</AutoAddNewResourcesAndTasks>
-    <CurrentDate>2011-09-18T02:57:00</CurrentDate>
+    <CurrentDate>2011-09-18T12:40:00</CurrentDate>
     <MicrosoftProjectServerURL>1</MicrosoftProjectServerURL>
     <Autolink>1</Autolink>
     <NewTaskStartDate>0</NewTaskStartDate>
@@ -2730,7 +2730,7 @@
             <Name>Qnet</Name>
             <Type>1</Type>
             <IsNull>0</IsNull>
-            <CreateDate>2011-09-18T02:56:00</CreateDate>
+            <CreateDate>2011-09-18T12:40:00</CreateDate>
             <WBS>1</WBS>
             <OutlineNumber>1</OutlineNumber>
             <OutlineLevel>1</OutlineLevel>
@@ -2797,7 +2797,7 @@
             <Name>Project start</Name>
             <Type>0</Type>
             <IsNull>0</IsNull>
-            <CreateDate>2011-09-18T02:56:00</CreateDate>
+            <CreateDate>2011-09-18T12:40:00</CreateDate>
             <WBS>1.1</WBS>
             <OutlineNumber>1.1</OutlineNumber>
             <OutlineLevel>2</OutlineLevel>
@@ -2864,7 +2864,7 @@
             <Name>Setting enviroment</Name>
             <Type>1</Type>
             <IsNull>0</IsNull>
-            <CreateDate>2011-09-18T02:56:00</CreateDate>
+            <CreateDate>2011-09-18T12:40:00</CreateDate>
             <WBS>1.2</WBS>
             <OutlineNumber>1.2</OutlineNumber>
             <OutlineLevel>2</OutlineLevel>
@@ -2931,7 +2931,7 @@
             <Name>Asignacion de Recursos</Name>
             <Type>0</Type>
             <IsNull>0</IsNull>
-            <CreateDate>2011-09-18T02:56:00</CreateDate>
+            <CreateDate>2011-09-18T12:40:00</CreateDate>
             <WBS>1.2.1</WBS>
             <OutlineNumber>1.2.1</OutlineNumber>
             <OutlineLevel>3</OutlineLevel>
@@ -3002,7 +3002,7 @@
             <Name>Capacitación</Name>
             <Type>0</Type>
             <IsNull>0</IsNull>
-            <CreateDate>2011-09-18T02:56:00</CreateDate>
+            <CreateDate>2011-09-18T12:40:00</CreateDate>
             <WBS>1.2.2</WBS>
             <OutlineNumber>1.2.2</OutlineNumber>
             <OutlineLevel>3</OutlineLevel>
@@ -3074,7 +3074,7 @@
             <Name>Set enviroment</Name>
             <Type>0</Type>
             <IsNull>0</IsNull>
-            <CreateDate>2011-09-18T02:56:00</CreateDate>
+            <CreateDate>2011-09-18T12:40:00</CreateDate>
             <WBS>1.2.3</WBS>
             <OutlineNumber>1.2.3</OutlineNumber>
             <OutlineLevel>3</OutlineLevel>
@@ -3148,7 +3148,7 @@
             <Name>Sprint 1 y 2 Planning Meeting</Name>
             <Type>0</Type>
             <IsNull>0</IsNull>
-            <CreateDate>2011-09-18T02:56:00</CreateDate>
+            <CreateDate>2011-09-18T12:40:00</CreateDate>
             <WBS>1.3</WBS>
             <OutlineNumber>1.3</OutlineNumber>
             <OutlineLevel>2</OutlineLevel>
@@ -3173,7 +3173,7 @@
             <FinishVariance>0</FinishVariance>
             <WorkVariance>0</WorkVariance>
             <FreeSlack>0</FreeSlack>
-            <TotalSlack>12600000</TotalSlack>
+            <TotalSlack>19680000</TotalSlack>
             <FixedCost>0</FixedCost>
             <FixedCostAccrual>3</FixedCostAccrual>
             <Cost>0</Cost>
@@ -3224,7 +3224,7 @@
             <Name>Sprint 1 - Privacy &amp; Security</Name>
             <Type>1</Type>
             <IsNull>0</IsNull>
-            <CreateDate>2011-09-18T02:56:00</CreateDate>
+            <CreateDate>2011-09-18T12:40:00</CreateDate>
             <WBS>1.4</WBS>
             <OutlineNumber>1.4</OutlineNumber>
             <OutlineLevel>2</OutlineLevel>
@@ -3250,7 +3250,7 @@
             <FinishVariance>0</FinishVariance>
             <WorkVariance>0</WorkVariance>
             <FreeSlack>0</FreeSlack>
-            <TotalSlack>12300000</TotalSlack>
+            <TotalSlack>19140000</TotalSlack>
             <FixedCost>0</FixedCost>
             <FixedCostAccrual>3</FixedCostAccrual>
             <Cost>0</Cost>
@@ -3296,7 +3296,7 @@
             <Name>Privacy tasks</Name>
             <Type>1</Type>
             <IsNull>0</IsNull>
-            <CreateDate>2011-09-18T02:56:00</CreateDate>
+            <CreateDate>2011-09-18T12:40:00</CreateDate>
             <WBS>1.4.1</WBS>
             <OutlineNumber>1.4.1</OutlineNumber>
             <OutlineLevel>3</OutlineLevel>
@@ -3322,7 +3322,7 @@
             <FinishVariance>0</FinishVariance>
             <WorkVariance>0</WorkVariance>
             <FreeSlack>0</FreeSlack>
-            <TotalSlack>23640000</TotalSlack>
+            <TotalSlack>30480000</TotalSlack>
             <FixedCost>0</FixedCost>
             <FixedCostAccrual>3</FixedCostAccrual>
             <Cost>0</Cost>
@@ -3369,7 +3369,7 @@
             <Name>Verify terms and conditions approval</Name>
             <Type>0</Type>
             <IsNull>0</IsNull>
-            <CreateDate>2011-09-18T02:56:00</CreateDate>
+            <CreateDate>2011-09-18T12:40:00</CreateDate>
             <WBS>1.4.1.1</WBS>
             <OutlineNumber>1.4.1.1</OutlineNumber>
             <OutlineLevel>4</OutlineLevel>
@@ -3395,7 +3395,7 @@
             <FinishVariance>0</FinishVariance>
             <WorkVariance>0</WorkVariance>
             <FreeSlack>0</FreeSlack>
-            <TotalSlack>23640000</TotalSlack>
+            <TotalSlack>30480000</TotalSlack>
             <FixedCost>0</FixedCost>
             <FixedCostAccrual>3</FixedCostAccrual>
             <Cost>0</Cost>
@@ -3442,7 +3442,7 @@
             <Name>Security Improvements</Name>
             <Type>1</Type>
             <IsNull>0</IsNull>
-            <CreateDate>2011-09-18T02:56:00</CreateDate>
+            <CreateDate>2011-09-18T12:40:00</CreateDate>
             <WBS>1.4.2</WBS>
             <OutlineNumber>1.4.2</OutlineNumber>
             <OutlineLevel>3</OutlineLevel>
@@ -3468,7 +3468,7 @@
             <FinishVariance>0</FinishVariance>
             <WorkVariance>0</WorkVariance>
             <FreeSlack>0</FreeSlack>
-            <TotalSlack>12300000</TotalSlack>
+            <TotalSlack>19140000</TotalSlack>
             <FixedCost>0</FixedCost>
             <FixedCostAccrual>3</FixedCostAccrual>
             <Cost>0</Cost>
@@ -3515,7 +3515,7 @@
             <Name>Captcha check</Name>
             <Type>0</Type>
             <IsNull>0</IsNull>
-            <CreateDate>2011-09-18T02:56:00</CreateDate>
+            <CreateDate>2011-09-18T12:40:00</CreateDate>
             <WBS/>
             <OutlineNumber>1.4.2.1</OutlineNumber>
             <OutlineLevel>4</OutlineLevel>
@@ -3541,7 +3541,7 @@
             <FinishVariance>0</FinishVariance>
             <WorkVariance>0</WorkVariance>
             <FreeSlack>0</FreeSlack>
-            <TotalSlack>12540000</TotalSlack>
+            <TotalSlack>19380000</TotalSlack>
             <FixedCost>0</FixedCost>
             <FixedCostAccrual>2</FixedCostAccrual>
             <Cost>0</Cost>
@@ -3587,7 +3587,7 @@
             <Name>Sql injection check</Name>
             <Type>0</Type>
             <IsNull>0</IsNull>
-            <CreateDate>2011-09-18T02:56:00</CreateDate>
+            <CreateDate>2011-09-18T12:40:00</CreateDate>
             <WBS>1.4.2.1</WBS>
             <OutlineNumber>1.4.2.2</OutlineNumber>
             <OutlineLevel>4</OutlineLevel>
@@ -3613,7 +3613,7 @@
             <FinishVariance>0</FinishVariance>
             <WorkVariance>0</WorkVariance>
             <FreeSlack>0</FreeSlack>
-            <TotalSlack>12300000</TotalSlack>
+            <TotalSlack>19140000</TotalSlack>
             <FixedCost>0</FixedCost>
             <FixedCostAccrual>3</FixedCostAccrual>
             <Cost>0</Cost>
@@ -3664,7 +3664,7 @@
             <Name>End Sprint 1</Name>
             <Type>0</Type>
             <IsNull>0</IsNull>
-            <CreateDate>2011-09-18T02:56:00</CreateDate>
+            <CreateDate>2011-09-18T12:40:00</CreateDate>
             <WBS>1.5</WBS>
             <OutlineNumber>1.5</OutlineNumber>
             <OutlineLevel>2</OutlineLevel>
@@ -3689,7 +3689,7 @@
             <FinishVariance>0</FinishVariance>
             <WorkVariance>0</WorkVariance>
             <FreeSlack>0</FreeSlack>
-            <TotalSlack>12300000</TotalSlack>
+            <TotalSlack>19140000</TotalSlack>
             <FixedCost>0</FixedCost>
             <FixedCostAccrual>3</FixedCostAccrual>
             <Cost>0</Cost>
@@ -3739,7 +3739,7 @@
             <Name>Sprint 2 - Social improvements</Name>
             <Type>1</Type>
             <IsNull>0</IsNull>
-            <CreateDate>2011-09-18T02:56:00</CreateDate>
+            <CreateDate>2011-09-18T12:40:00</CreateDate>
             <WBS>1.6</WBS>
             <OutlineNumber>1.6</OutlineNumber>
             <OutlineLevel>2</OutlineLevel>
@@ -3764,7 +3764,7 @@
             <FinishVariance>0</FinishVariance>
             <WorkVariance>0</WorkVariance>
             <FreeSlack>0</FreeSlack>
-            <TotalSlack>12300000</TotalSlack>
+            <TotalSlack>19140000</TotalSlack>
             <FixedCost>0</FixedCost>
             <FixedCostAccrual>3</FixedCostAccrual>
             <Cost>0</Cost>
@@ -3815,7 +3815,7 @@
             <Name>User popularity ranking</Name>
             <Type>0</Type>
             <IsNull>0</IsNull>
-            <CreateDate>2011-09-18T02:56:00</CreateDate>
+            <CreateDate>2011-09-18T12:40:00</CreateDate>
             <WBS>1.6.1</WBS>
             <OutlineNumber>1.6.1</OutlineNumber>
             <OutlineLevel>3</OutlineLevel>
@@ -3840,7 +3840,7 @@
             <FinishVariance>0</FinishVariance>
             <WorkVariance>0</WorkVariance>
             <FreeSlack>0</FreeSlack>
-            <TotalSlack>12300000</TotalSlack>
+            <TotalSlack>19140000</TotalSlack>
             <FixedCost>0</FixedCost>
             <FixedCostAccrual>3</FixedCostAccrual>
             <Cost>0</Cost>
@@ -3887,7 +3887,7 @@
             <Name>Instant messages</Name>
             <Type>0</Type>
             <IsNull>0</IsNull>
-            <CreateDate>2011-09-18T02:56:00</CreateDate>
+            <CreateDate>2011-09-18T12:40:00</CreateDate>
             <WBS>1.6.2</WBS>
             <OutlineNumber>1.6.2</OutlineNumber>
             <OutlineLevel>3</OutlineLevel>
@@ -3912,7 +3912,7 @@
             <FinishVariance>0</FinishVariance>
             <WorkVariance>0</WorkVariance>
             <FreeSlack>0</FreeSlack>
-            <TotalSlack>12300000</TotalSlack>
+            <TotalSlack>19140000</TotalSlack>
             <FixedCost>0</FixedCost>
             <FixedCostAccrual>3</FixedCostAccrual>
             <Cost>0</Cost>
@@ -3959,7 +3959,7 @@
             <Name>Integracion Sprint 1 y 2</Name>
             <Type>1</Type>
             <IsNull>0</IsNull>
-            <CreateDate>2011-09-18T02:56:00</CreateDate>
+            <CreateDate>2011-09-18T12:40:00</CreateDate>
             <WBS>1.7</WBS>
             <OutlineNumber>1.7</OutlineNumber>
             <OutlineLevel>2</OutlineLevel>
@@ -3984,7 +3984,7 @@
             <FinishVariance>0</FinishVariance>
             <WorkVariance>0</WorkVariance>
             <FreeSlack>0</FreeSlack>
-            <TotalSlack>12300000</TotalSlack>
+            <TotalSlack>19140000</TotalSlack>
             <FixedCost>0</FixedCost>
             <FixedCostAccrual>3</FixedCostAccrual>
             <Cost>0</Cost>
@@ -4035,7 +4035,7 @@
             <Name>Tests Sprint 1 y 2</Name>
             <Type>0</Type>
             <IsNull>0</IsNull>
-            <CreateDate>2011-09-18T02:56:00</CreateDate>
+            <CreateDate>2011-09-18T12:40:00</CreateDate>
             <WBS>1.7.1</WBS>
             <OutlineNumber>1.7.1</OutlineNumber>
             <OutlineLevel>3</OutlineLevel>
@@ -4060,7 +4060,7 @@
             <FinishVariance>0</FinishVariance>
             <WorkVariance>0</WorkVariance>
             <FreeSlack>0</FreeSlack>
-            <TotalSlack>12300000</TotalSlack>
+            <TotalSlack>19140000</TotalSlack>
             <FixedCost>0</FixedCost>
             <FixedCostAccrual>3</FixedCostAccrual>
             <Cost>0</Cost>
@@ -4107,7 +4107,7 @@
             <Name>Correcciones Sprint 1 y 2</Name>
             <Type>0</Type>
             <IsNull>0</IsNull>
-            <CreateDate>2011-09-18T02:56:00</CreateDate>
+            <CreateDate>2011-09-18T12:40:00</CreateDate>
             <WBS>1.7.2</WBS>
             <OutlineNumber>1.7.2</OutlineNumber>
             <OutlineLevel>3</OutlineLevel>
@@ -4132,7 +4132,7 @@
             <FinishVariance>0</FinishVariance>
             <WorkVariance>0</WorkVariance>
             <FreeSlack>0</FreeSlack>
-            <TotalSlack>12300000</TotalSlack>
+            <TotalSlack>19140000</TotalSlack>
             <FixedCost>0</FixedCost>
             <FixedCostAccrual>3</FixedCostAccrual>
             <Cost>0</Cost>
@@ -4183,7 +4183,7 @@
             <Name>End Sprint 2</Name>
             <Type>0</Type>
             <IsNull>0</IsNull>
-            <CreateDate>2011-09-18T02:56:00</CreateDate>
+            <CreateDate>2011-09-18T12:40:00</CreateDate>
             <WBS>1.8</WBS>
             <OutlineNumber>1.8</OutlineNumber>
             <OutlineLevel>2</OutlineLevel>
@@ -4254,7 +4254,7 @@
             <Name>Sprint 3 Planning Meeting</Name>
             <Type>0</Type>
             <IsNull>0</IsNull>
-            <CreateDate>2011-09-18T02:56:00</CreateDate>
+            <CreateDate>2011-09-18T12:40:00</CreateDate>
             <WBS>1.9</WBS>
             <OutlineNumber>1.9</OutlineNumber>
             <OutlineLevel>2</OutlineLevel>
@@ -4279,7 +4279,7 @@
             <FinishVariance>0</FinishVariance>
             <WorkVariance>0</WorkVariance>
             <FreeSlack>0</FreeSlack>
-            <TotalSlack>12300000</TotalSlack>
+            <TotalSlack>19140000</TotalSlack>
             <FixedCost>0</FixedCost>
             <FixedCostAccrual>3</FixedCostAccrual>
             <Cost>0</Cost>
@@ -4325,7 +4325,7 @@
             <Name>Sprint 3 - Miscellaneous</Name>
             <Type>1</Type>
             <IsNull>0</IsNull>
-            <CreateDate>2011-09-18T02:56:00</CreateDate>
+            <CreateDate>2011-09-18T12:40:00</CreateDate>
             <WBS>1.10</WBS>
             <OutlineNumber>1.10</OutlineNumber>
             <OutlineLevel>2</OutlineLevel>
@@ -4350,7 +4350,7 @@
             <FinishVariance>0</FinishVariance>
             <WorkVariance>0</WorkVariance>
             <FreeSlack>0</FreeSlack>
-            <TotalSlack>12300000</TotalSlack>
+            <TotalSlack>19140000</TotalSlack>
             <FixedCost>0</FixedCost>
             <FixedCostAccrual>3</FixedCostAccrual>
             <Cost>0</Cost>
@@ -4401,7 +4401,7 @@
             <Name>Password recovery</Name>
             <Type>0</Type>
             <IsNull>0</IsNull>
-            <CreateDate>2011-09-18T02:56:00</CreateDate>
+            <CreateDate>2011-09-18T12:40:00</CreateDate>
             <WBS>1.10.1</WBS>
             <OutlineNumber>1.10.1</OutlineNumber>
             <OutlineLevel>3</OutlineLevel>
@@ -4426,7 +4426,7 @@
             <FinishVariance>0</FinishVariance>
             <WorkVariance>0</WorkVariance>
             <FreeSlack>0</FreeSlack>
-            <TotalSlack>12300000</TotalSlack>
+            <TotalSlack>19140000</TotalSlack>
             <FixedCost>0</FixedCost>
             <FixedCostAccrual>3</FixedCostAccrual>
             <Cost>0</Cost>
@@ -4473,7 +4473,7 @@
             <Name>Recommend to a friend</Name>
             <Type>0</Type>
             <IsNull>0</IsNull>
-            <CreateDate>2011-09-18T02:56:00</CreateDate>
+            <CreateDate>2011-09-18T12:40:00</CreateDate>
             <WBS>1.10.2</WBS>
             <OutlineNumber>1.10.2</OutlineNumber>
             <OutlineLevel>3</OutlineLevel>
@@ -4498,7 +4498,7 @@
             <FinishVariance>0</FinishVariance>
             <WorkVariance>0</WorkVariance>
             <FreeSlack>0</FreeSlack>
-            <TotalSlack>12300000</TotalSlack>
+            <TotalSlack>19140000</TotalSlack>
             <FixedCost>0</FixedCost>
             <FixedCostAccrual>3</FixedCostAccrual>
             <Cost>0</Cost>
@@ -4545,7 +4545,7 @@
             <Name>Integracion Sprint 3</Name>
             <Type>1</Type>
             <IsNull>0</IsNull>
-            <CreateDate>2011-09-18T02:56:00</CreateDate>
+            <CreateDate>2011-09-18T12:40:00</CreateDate>
             <WBS>1.11</WBS>
             <OutlineNumber>1.11</OutlineNumber>
             <OutlineLevel>2</OutlineLevel>
@@ -4570,7 +4570,7 @@
             <FinishVariance>0</FinishVariance>
             <WorkVariance>0</WorkVariance>
             <FreeSlack>0</FreeSlack>
-            <TotalSlack>12300000</TotalSlack>
+            <TotalSlack>19140000</TotalSlack>
             <FixedCost>0</FixedCost>
             <FixedCostAccrual>3</FixedCostAccrual>
             <Cost>0</Cost>
@@ -4621,7 +4621,7 @@
             <Name>Tests Sprint 3</Name>
             <Type>0</Type>
             <IsNull>0</IsNull>
-            <CreateDate>2011-09-18T02:56:00</CreateDate>
+            <CreateDate>2011-09-18T12:40:00</CreateDate>
             <WBS>1.11.1</WBS>
             <OutlineNumber>1.11.1</OutlineNumber>
             <OutlineLevel>3</OutlineLevel>
@@ -4646,7 +4646,7 @@
             <FinishVariance>0</FinishVariance>
             <WorkVariance>0</WorkVariance>
             <FreeSlack>0</FreeSlack>
-            <TotalSlack>12300000</TotalSlack>
+            <TotalSlack>19140000</TotalSlack>
             <FixedCost>0</FixedCost>
             <FixedCostAccrual>3</FixedCostAccrual>
             <Cost>0</Cost>
@@ -4693,7 +4693,7 @@
             <Name>Correcciones Sprint 3</Name>
             <Type>0</Type>
             <IsNull>0</IsNull>
-            <CreateDate>2011-09-18T02:56:00</CreateDate>
+            <CreateDate>2011-09-18T12:40:00</CreateDate>
             <WBS>1.11.2</WBS>
             <OutlineNumber>1.11.2</OutlineNumber>
             <OutlineLevel>3</OutlineLevel>
@@ -4718,7 +4718,7 @@
             <FinishVariance>0</FinishVariance>
             <WorkVariance>0</WorkVariance>
             <FreeSlack>0</FreeSlack>
-            <TotalSlack>12300000</TotalSlack>
+            <TotalSlack>19140000</TotalSlack>
             <FixedCost>0</FixedCost>
             <FixedCostAccrual>3</FixedCostAccrual>
             <Cost>0</Cost>
@@ -4769,7 +4769,7 @@
             <Name>Release Meeting</Name>
             <Type>0</Type>
             <IsNull>0</IsNull>
-            <CreateDate>2011-09-18T02:56:00</CreateDate>
+            <CreateDate>2011-09-18T12:40:00</CreateDate>
             <WBS>1.12</WBS>
             <OutlineNumber>1.12</OutlineNumber>
             <OutlineLevel>2</OutlineLevel>
@@ -4794,7 +4794,7 @@
             <FinishVariance>0</FinishVariance>
             <WorkVariance>0</WorkVariance>
             <FreeSlack>0</FreeSlack>
-            <TotalSlack>12300000</TotalSlack>
+            <TotalSlack>19140000</TotalSlack>
             <FixedCost>0</FixedCost>
             <FixedCostAccrual>3</FixedCostAccrual>
             <Cost>0</Cost>
@@ -4840,7 +4840,7 @@
             <Name>Reserva Developers</Name>
             <Type>0</Type>
             <IsNull>0</IsNull>
-            <CreateDate>2011-09-18T02:56:00</CreateDate>
+            <CreateDate>2011-09-18T12:40:00</CreateDate>
             <WBS>1.13</WBS>
             <OutlineNumber>1.13</OutlineNumber>
             <OutlineLevel>2</OutlineLevel>
@@ -4865,7 +4865,7 @@
             <FinishVariance>0</FinishVariance>
             <WorkVariance>0</WorkVariance>
             <FreeSlack>0</FreeSlack>
-            <TotalSlack>12600000</TotalSlack>
+            <TotalSlack>19140000</TotalSlack>
             <FixedCost>0</FixedCost>
             <FixedCostAccrual>3</FixedCostAccrual>
             <Cost>0</Cost>
@@ -4911,7 +4911,7 @@
             <Name>Entrega Final (fin)</Name>
             <Type>0</Type>
             <IsNull>0</IsNull>
-            <CreateDate>2011-09-18T02:56:00</CreateDate>
+            <CreateDate>2011-09-18T12:40:00</CreateDate>
             <WBS>1.14</WBS>
             <OutlineNumber>1.14</OutlineNumber>
             <OutlineLevel>2</OutlineLevel>
@@ -4928,7 +4928,7 @@
             <Estimated>0</Estimated>
             <Milestone>0</Milestone>
             <Summary>0</Summary>
-            <Critical>1</Critical>
+            <Critical>0</Critical>
             <IsSubproject>0</IsSubproject>
             <IsSubprojectReadOnly>0</IsSubprojectReadOnly>
             <ExternalTask>0</ExternalTask>
@@ -4936,7 +4936,7 @@
             <FinishVariance>0</FinishVariance>
             <WorkVariance>0</WorkVariance>
             <FreeSlack>0</FreeSlack>
-            <TotalSlack>0</TotalSlack>
+            <TotalSlack>6540000</TotalSlack>
             <FixedCost>0</FixedCost>
             <FixedCostAccrual>3</FixedCostAccrual>
             <Cost>0</Cost>
@@ -4982,7 +4982,7 @@
             <Name>Management</Name>
             <Type>1</Type>
             <IsNull>0</IsNull>
-            <CreateDate>2011-09-18T02:56:00</CreateDate>
+            <CreateDate>2011-09-18T12:40:00</CreateDate>
             <WBS>1.15</WBS>
             <OutlineNumber>1.15</OutlineNumber>
             <OutlineLevel>2</OutlineLevel>
@@ -5049,7 +5049,7 @@
             <Name>Project Management</Name>
             <Type>0</Type>
             <IsNull>0</IsNull>
-            <CreateDate>2011-09-18T02:56:00</CreateDate>
+            <CreateDate>2011-09-18T12:40:00</CreateDate>
             <WBS>1.15.1</WBS>
             <OutlineNumber>1.15.1</OutlineNumber>
             <OutlineLevel>3</OutlineLevel>
@@ -5121,7 +5121,7 @@
             <Name>Reserva Manager 1</Name>
             <Type>0</Type>
             <IsNull>0</IsNull>
-            <CreateDate>2011-09-18T02:56:00</CreateDate>
+            <CreateDate>2011-09-18T12:40:00</CreateDate>
             <WBS>1.15.2</WBS>
             <OutlineNumber>1.15.2</OutlineNumber>
             <OutlineLevel>3</OutlineLevel>
@@ -5193,7 +5193,7 @@
             <Name>Testing</Name>
             <Type>1</Type>
             <IsNull>0</IsNull>
-            <CreateDate>2011-09-18T02:56:00</CreateDate>
+            <CreateDate>2011-09-18T12:40:00</CreateDate>
             <WBS>1.15.3</WBS>
             <OutlineNumber>1.15.3</OutlineNumber>
             <OutlineLevel>3</OutlineLevel>
@@ -5264,7 +5264,7 @@
             <Name>Definición de casos de prueba 1</Name>
             <Type>0</Type>
             <IsNull>0</IsNull>
-            <CreateDate>2011-09-18T02:56:00</CreateDate>
+            <CreateDate>2011-09-18T12:40:00</CreateDate>
             <WBS>1.15.3.1</WBS>
             <OutlineNumber>1.15.3.1</OutlineNumber>
             <OutlineLevel>4</OutlineLevel>
@@ -5332,7 +5332,7 @@
             <Name>Testing 1</Name>
             <Type>0</Type>
             <IsNull>0</IsNull>
-            <CreateDate>2011-09-18T02:56:00</CreateDate>
+            <CreateDate>2011-09-18T12:40:00</CreateDate>
             <WBS>1.15.3.2</WBS>
             <OutlineNumber>1.15.3.2</OutlineNumber>
             <OutlineLevel>4</OutlineLevel>
@@ -5403,7 +5403,7 @@
             <Name>Definición de casos de prueba 2</Name>
             <Type>0</Type>
             <IsNull>0</IsNull>
-            <CreateDate>2011-09-18T02:56:00</CreateDate>
+            <CreateDate>2011-09-18T12:40:00</CreateDate>
             <WBS>1.15.3.3</WBS>
             <OutlineNumber>1.15.3.3</OutlineNumber>
             <OutlineLevel>4</OutlineLevel>
@@ -5474,7 +5474,7 @@
             <Name>Testing 2</Name>
             <Type>0</Type>
             <IsNull>0</IsNull>
-            <CreateDate>2011-09-18T02:56:00</CreateDate>
+            <CreateDate>2011-09-18T12:40:00</CreateDate>
             <WBS>1.15.3.4</WBS>
             <OutlineNumber>1.15.3.4</OutlineNumber>
             <OutlineLevel>4</OutlineLevel>
@@ -5545,7 +5545,7 @@
             <Name>Definición de casos de prueba 3</Name>
             <Type>0</Type>
             <IsNull>0</IsNull>
-            <CreateDate>2011-09-18T02:56:00</CreateDate>
+            <CreateDate>2011-09-18T12:40:00</CreateDate>
             <WBS>1.15.3.5</WBS>
             <OutlineNumber>1.15.3.5</OutlineNumber>
             <OutlineLevel>4</OutlineLevel>
@@ -5616,7 +5616,7 @@
             <Name>Testing 3</Name>
             <Type>0</Type>
             <IsNull>0</IsNull>
-            <CreateDate>2011-09-18T02:56:00</CreateDate>
+            <CreateDate>2011-09-18T12:40:00</CreateDate>
             <WBS>1.15.3.6</WBS>
             <OutlineNumber>1.15.3.6</OutlineNumber>
             <OutlineLevel>4</OutlineLevel>
@@ -5687,7 +5687,7 @@
             <Name>IT Support</Name>
             <Type>0</Type>
             <IsNull>0</IsNull>
-            <CreateDate>2011-09-18T02:56:00</CreateDate>
+            <CreateDate>2011-09-18T12:40:00</CreateDate>
             <WBS>1.15.4</WBS>
             <OutlineNumber>1.15.4</OutlineNumber>
             <OutlineLevel>3</OutlineLevel>
@@ -5759,7 +5759,7 @@
             <Name>Project Status Tracking</Name>
             <Type>0</Type>
             <IsNull>0</IsNull>
-            <CreateDate>2011-09-18T02:56:00</CreateDate>
+            <CreateDate>2011-09-18T12:40:00</CreateDate>
             <WBS>1.15.5</WBS>
             <OutlineNumber>1.15.5</OutlineNumber>
             <OutlineLevel>3</OutlineLevel>
@@ -5831,7 +5831,7 @@
             <Name>Team Meeting Planning</Name>
             <Type>0</Type>
             <IsNull>0</IsNull>
-            <CreateDate>2011-09-18T02:56:00</CreateDate>
+            <CreateDate>2011-09-18T12:40:00</CreateDate>
             <WBS>1.15.6</WBS>
             <OutlineNumber>1.15.6</OutlineNumber>
             <OutlineLevel>3</OutlineLevel>
@@ -5903,7 +5903,7 @@
             <Name>Captcha check</Name>
             <Type>0</Type>
             <IsNull>0</IsNull>
-            <CreateDate>2011-09-18T02:56:00</CreateDate>
+            <CreateDate>2011-09-18T12:40:00</CreateDate>
             <WBS>1.4.2.2</WBS>
             <OutlineNumber>2</OutlineNumber>
             <OutlineLevel>1</OutlineLevel>
@@ -6345,7 +6345,7 @@
             <OvertimeWork>PT0H0M0S</OvertimeWork>
             <RemainingWork>PT97H0M0S</RemainingWork>
             <Stop>1969-12-31T21:00:00</Stop>
-            <Resume>2011-08-01T15:00:00</Resume>
+            <Resume>2011-08-01T06:00:00</Resume>
             <Units>1</Units>
             <Work>PT97H0M0S</Work>
             <WorkContour>0</WorkContour>
