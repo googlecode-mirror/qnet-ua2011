@@ -1,12 +1,5 @@
 <?php
 
-/**
- * Created by IntelliJ IDEA.
- * User: Tomas Alabes
- * Date: 15/09/2010
- * Time: 18:42:45
- * To change this template use File | Settings | File Templates.
- */
 require_once dirname(__FILE__) . '\..\util.php';
 require_dao('userDao');
 use Qnet\Dao\UserDAO;

@@ -37,6 +37,29 @@ class TrackingsDAO {
         return $ans;
 	}
 
+    public function getRanking(){
+        $connector = new DBConnector();
+        $connection = $connector->createConnection();
+        $result = mysql_query("select followedId, count(followerId) as quantity ,u.name,u.lastname from trackings t join users u on t.followedId=u.id  group by followedId order by count(followerId) desc limit 20");
+        $ans = array();
+        $index=-1;
+        while($row = mysql_fetch_assoc($result)) {
+            $index++;
+            $tempResult=array();
+            $tempResult["name"]=$row["name"];
+            $tempResult["lastname"]=$row["lastname"];
+            $tempResult["quantity"]=$row["quantity"];
+
+
+
+            $ans[$index]=$tempResult;
+        }
+        mysql_free_result($result);
+        mysql_close($connection);
+
+        return $ans;
+    }
+
 	public function getFollowed($userId){
         $connector = new DBConnector();
         $connection = $connector->createConnection();
