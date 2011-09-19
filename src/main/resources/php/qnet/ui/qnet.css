@@ -518,4 +518,18 @@ hr {
     overflow-y: scroll;
 }
 
+#table {
+    /*width: 550px;*/
+    height: 500px;
+    width: 500px;
+    text-decoration: blink;
+    text-transform: uppercase;
+    resize: both;
+    text-align: center;
+    table-layout: auto;
+
+    border-top-left-radius: 15px;
+
+}
+
 
