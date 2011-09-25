@@ -24,6 +24,7 @@ class Validator
         $rules[] = "is_alpha,userName,User name alphanumeric field.";
         $rules[] = "required,password,Please enter a password.";
         $rules[] = "same_as,password,rePassword,Please ensure the passwords you enter are the same.";
+        $rules[] = "required,agreement,You didnt agree with the conditions of the application.";  
         $errors = validateFields($_POST, $rules);
 
         return $errors;

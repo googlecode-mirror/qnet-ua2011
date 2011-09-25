@@ -26,7 +26,6 @@ if (empty($fieldErrors) && $validateCaptcha) {
     User::readProperties($user, $_POST);
     $dao->registerUser($user);
     $c->login($_POST['userName'], $_POST['password']);
-    //clean vars here
     cleanSessionAfterLogin();
     header("Location: viewprofile.php");
   //  header("Location: /Qnet/target/classes/php/qnet/ui/viewprofile.php");
