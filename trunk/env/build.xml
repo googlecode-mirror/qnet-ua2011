@@ -1,0 +1,13 @@
+<!-- Ant file to copy the sources from destination to deploy location-->
+<project>
+	<property name="origin" location="D:\mis_docs\facu_2011\dir_proyectos\qnet-ua2011\src\main\resources"/>
+	<property name="destination" location="D:\soft_seven\xammp\xampplite\htdocs\Qnet\target\classes"/>
+	<target name="deploy">
+		<copy todir="${destination}">
+			<fileset dir="${origin}">
+			</fileset>	
+		</copy>
+	</target>
+</project>
+
+
