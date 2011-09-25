@@ -3,6 +3,16 @@
 require_controller("sessionController");
 use Qnet\Controller\SessionController;
 
+function cleanSessionAfterLogin(){
+	$_SESSION["completeForm"]=null;
+	$_SESSION["userName"]=null;
+	$_SESSION["userLastName"]=null;
+	$_SESSION["day"]=null;
+	$_SESSION["institutionName"]=null;
+	$_SESSION["errors"]=null;
+	
+}
+
 function check_session() {
     $session = new SessionController();
     if (!$session->isLoggedIn()) {
