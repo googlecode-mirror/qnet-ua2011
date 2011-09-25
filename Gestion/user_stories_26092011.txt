@@ -1,0 +1,30 @@
+User stories for qnet
+
+
+Verify terms and conditions approval:
+
+The user must check the option "I accept the terms and conditions" to be able to sign up in the application.
+If the user doesnt accept the terms and conditions he will return to initial page.
+
+Captcha validation:
+
+The user must pass the captcha validation to do sign up.
+If the user doesnt enters the valid captcha image he wont be able to sign up.
+
+Sql injection check:
+
+The input from the user that interacts with the database must be validated to avoid sql injection attacks.
+
+User popularity ranking:
+
+The user can view a ranking with : username , followers quantity.
+
+Instant messages:
+
+The user can send a message with the following characteristics:
+	From:Who sends it.
+	To:Destination.
+	Subject:The subject.
+	Content:The message content.
+The user can view all the messages he received , delete a message or create a new one.
+
