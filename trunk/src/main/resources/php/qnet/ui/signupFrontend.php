@@ -26,8 +26,10 @@ if (empty($fieldErrors) && $validateCaptcha) {
     User::readProperties($user, $_POST);
     $dao->registerUser($user);
     $c->login($_POST['userName'], $_POST['password']);
-
-    header("Location: /Qnet/target/classes/php/qnet/ui/viewprofile.php");
+    //clean vars here
+    cleanSessionAfterLogin();
+    header("Location: viewprofile.php");
+  //  header("Location: /Qnet/target/classes/php/qnet/ui/viewprofile.php");
 } else {
 
     $_SESSION["completeForm"]=true;
@@ -37,7 +39,7 @@ if (empty($fieldErrors) && $validateCaptcha) {
     $_SESSION["institutionName"]=$_POST['institutionName'];
     $_SESSION["errors"]=$fieldErrors;
 
-
-    header("Location: /Qnet/target/classes/php/qnet/ui/signup.php?error=true");
+    header("Location: signup.php?error=true");
+   // header("Location: /Qnet/target/classes/php/qnet/ui/signup.php?error=true");
 }
 ?>
