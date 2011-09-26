@@ -12,7 +12,7 @@
                 echo '<li><a href="newquery.php">Create Poll</a></li>'; echo'
                 <li><a href="listqueries.php">Answer Polls</a></li>
                 <li><a href="bridge.php?target=logoutFrontend">Logout</a></li>
-                <li></li>
+                <li><a href="inbox.php">Inbox</a></li>
                 <li></li>
                 <li></li>                
                 <li>Welcome '; echo $header->getSessionName(); echo'.</li>

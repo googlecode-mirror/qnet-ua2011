@@ -185,6 +185,19 @@ $qsegment = "CREATE TABLE `qnet`.`qsegment` (
 ENGINE = InnoDB;";
 mysql_query($qsegment) or die ("Error in query: $qsegment. " . mysql_error());
 
+$messages_var = "DROP TABLE IF EXISTS `qnet`.`messages`;";
+mysql_query($messages_var) or die ("Error in query: $messages_var. " . mysql_error());
+$messages_var = "CREATE TABLE `qnet`.`messages` (
+  `message_id` int(11) NOT NULL auto_increment,
+  `from_user` varchar(65) character set latin1 collate latin1_general_ci NOT NULL,
+  `to_user` varchar(65) character set latin1 collate latin1_general_ci NOT NULL,
+  `message_title` varchar(65) NOT NULL,
+  `message_contents` longtext NOT NULL,
+  `message_read` int(11) NOT NULL default '0',
+  PRIMARY KEY  (`message_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3;";
+mysql_query($messages_var) or die ("Error in query: $messages_var. " . mysql_error());
+
 $tracking_var = "DROP TABLE IF EXISTS `qnet`.`trackings`;";
 mysql_query($tracking_var) or die ("Error in query: $tracking_var. " . mysql_error());
 $tracking_var = "CREATE TABLE  `qnet`.`trackings` (
