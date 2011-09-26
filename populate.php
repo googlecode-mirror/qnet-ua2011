@@ -34,6 +34,11 @@ insertUser(2, 'Tomas', 'Alabes', 'ta', 1, '15-11-1945','Female', 'Single', 'Univ
 insertUser(3, 'Mariano', 'Claveria', 'mc', 1, '16-11-1988','Male', 'Single', 'University', 'UA', 'Argentina', 'Musulman', 'img08');
 insertUser(4, 'Agustin', 'Miura', 'am', 1, '17-11-2002','Female', 'Single', 'University', 'UA', 'Argentina', 'Catholic', 'img08');
 insertUser(5, 'Daniel', 'Grane', 'dag', 1, '20-11-1990','Male', 'Single', 'University', 'UA', 'Argentina', 'Catholic', 'img08');
+insertUser(6, 'Damian', 'Minniti', 'dm', 1, '20-11-1990','Male', 'Single', 'University', 'UA', 'Argentina', 'Catholic', 'img08');
+insertUser(7, 'Martin', 'Sanchez', 'ms', 1, '20-11-1990','Male', 'Single', 'University', 'UA', 'Argentina', 'Catholic', 'img08');
+insertUser(8, 'Pablo', 'Celentano', 'pc', 1, '20-11-1990','Male', 'Single', 'University', 'UA', 'Argentina', 'Catholic', 'img08');
+insertUser(9, 'Jorge', 'Gonzales', 'jg', 1, '20-11-1990','Male', 'Single', 'University', 'UA', 'Argentina', 'Catholic', 'img08');
+insertUser(10, 'Pedro', 'Sorio', 'ps', 1, '20-11-1990','Male', 'Single', 'University', 'UA', 'Argentina', 'Catholic', 'img08');
 
 // Insert query
 
@@ -85,6 +90,11 @@ insertTracking(2,3,false, getNextDate($phpdate));
 insertTracking(3,4,true, getNextDate($phpdate));
 insertTracking(4,5,true, getNextDate($phpdate));
 insertTracking(5,4,true, getNextDate($phpdate));
+insertTracking(6,5,true, getNextDate($phpdate));
+insertTracking(5,6,true, getNextDate($phpdate));
+insertTracking(8,9,true, getNextDate($phpdate));
+insertTracking(7,9,true, getNextDate($phpdate));
+insertTracking(10,9,true, getNextDate($phpdate));
 
 function insertStatistic($id,$title,$uid,$qid, $date) {
     $queries = "INSERT INTO statistics (id,title, FK_users, FK_queries, date) VALUES ($id, '$title', $uid, $qid, '$date');";

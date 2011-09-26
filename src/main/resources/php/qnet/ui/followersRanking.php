@@ -12,8 +12,8 @@ $controller = new ProfileController();
 $photoController = new PhotoController();
 $photoPath = $photoController->getPhoto();
 $hasError = $_GET['error'];
-$trackingsDAO=new \Qnet\Dao\TrackingsDAO();
-$ranking= $trackingsDAO->getRanking();
+$trackingsDAO = new \Qnet\Dao\TrackingsDAO();
+$ranking = $trackingsDAO->getRanking();
 //$message=$photoController->getMessage($hasError);
 ?>
 <body>
@@ -22,65 +22,35 @@ $ranking= $trackingsDAO->getRanking();
     <div id="page">
 
         <div id="content">
-            <h1>RANKING</h1>
+            <h1> FOLLOWERS RANKING </h1>
 
             <br> </br> <br> </br>
 
-            <table border="1">
+            <table>
                 <table id="table" border="5">
-                    <?php
-                        foreach($ranking as $key=>$value){
-                        $name=$value["name"];
-                        $lastname=$value["lastname"];
-                        $quantity=$value["quantity"];
-                        echo ($name.",".$lastname."".$quantity );
-                    }
+    <tr>
+        <th>Name</th>
+        <th>number of followers</th>
+    </tr>
+<?php
+    foreach ($ranking as $key => $value) {
 ?>
-                    <tr>
-                        <th>Name</th>
-                        <th>number of followers</th>
-                    </tr>
-                    <tr>
-                        <td>xxxxxxxx</td>
-                        <td>;
-                       </td>
-                    </tr>
-                    <tr>
-                        <td>xxxxxxxx</td>
-                        <td>xxxxxxxx</td>
-                    </tr>
-                    <tr>
-                        <td>xxxxxxxx</td>
-                        <td>xxxxxxxx</td>
-                    </tr>
-                    <tr>
-                        <td>xxxxxxxx</td>
-                        <td>xxxxxxxx</td>
-                    </tr>
-                    <tr>
-                        <td>xxxxxxxx</td>
-                        <td>xxxxxxxx</td>
-                    </tr>
-                    <tr>
-                        <td>xxxxxxxx</td>
-                        <td>xxxxxxxx</td>
-                    </tr>
-                    <tr>
-                        <td>xxxxxxxx</td>
-                        <td>xxxxxxxx</td>
-                    </tr>
-                    <tr>
-                        <td>xxxxxxxx</td>
-                        <td>xxxxxxxx</td>
-                    </tr>
-                    <tr>
-                        <td>xxxxxxxx</td>
-                        <td>xxxxxxxx</td>
-                    </tr>
-                    <tr>
-                        <td>xxxxxxxx</td>
-                        <td>xxxxxxxx</td>
-                    </tr>
+
+    <tr>
+        <td>
+            <?php
+        $name = $value["name"];
+        $lastname = $value["lastname"];
+        echo ($name . "," . $lastname);
+        ?>
+        </td>
+        <td>
+            <?php
+            echo $value["quantity"];
+            ?>
+        </td>
+
+<?php } ?>
                 </table>
 
                 <!--        		--><?php

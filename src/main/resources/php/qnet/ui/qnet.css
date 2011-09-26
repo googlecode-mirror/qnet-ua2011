@@ -513,13 +513,12 @@ hr {
 }
 
 #terms {
-    /*width: 550px;*/
     height: 250px;
     overflow-y: scroll;
 }
 
 #table {
-    /*width: 550px;*/
+    border:1px solid #C2C8CC;
     height: 500px;
     width: 500px;
     text-decoration: blink;
@@ -528,7 +527,6 @@ hr {
     text-align: center;
     table-layout: auto;
 
-    border-top-left-radius: 15px;
 
 }
 

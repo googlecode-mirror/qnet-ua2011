@@ -1,4 +1,5 @@
 <?php include "fragment/insecureHead.php"; ?>
+<body>
 <?php
 /*
 $_SESSION["completeForm"]=true;
@@ -10,24 +11,22 @@ $_SESSION["completeForm"]=true;
 
 echo "</br>";
 
-$completeForm = $_SESSION["completeForm"];
-$emptyValue = "";
-$defaultUserName = $emptyValue;
-$defaultUserLastName = $emptyValue;
-$DefaultInstitutionName = $emptyValue;
+ $completeForm = $_SESSION["completeForm"];
+ $emptyValue = "";
+ $defaultUserName = $emptyValue;
+ $defaultUserLastName = $emptyValue;
+ $DefaultInstitutionName = $emptyValue;
 
 if ($completeForm) {
-    $defaultUserName = $_SESSION["userName"];
-    $defaultUserLastName = $_SESSION["userLastName"];
-    $DefaultInstitutionName = $_SESSION["institutionName"];
+     $defaultUserName = $_SESSION["userName"];
+     $defaultUserLastName = $_SESSION["userLastName"];
+     $DefaultInstitutionName = $_SESSION["institutionName"];
 }
 
-//TODO Print errors
-//print_r($_SESSION["errors"]);
+ print_r($_SESSION["errors"]);
 
 ?>
 
-<body>
 <div id="wrapper">
 <?php
         require_once dirname(__FILE__) . '\..\util.php';
