@@ -68,13 +68,10 @@ class TrackingsDAO
     {
         $connector = new DBConnector();
         $connection = $connector->createConnection();
-
         $track = "INSERT INTO trackings (followedId, followerId,approved, date) VALUES ($followingId,$followerId," . ($approved
                 ? 1 : 0) . ", '$date');";
         mysql_query($track) or die ("Error in query: $track. " . mysql_error());
         mysql_close($connection);
-
-
     }
 
     public function getFollowed($userId)
