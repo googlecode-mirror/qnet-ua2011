@@ -18,23 +18,6 @@ use Qnet\Model\User;
           if(array_search("2",$results)!=null){
 			 echo "User 2 is still followed by User 1" ;
 			}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
                      /*
 
 
