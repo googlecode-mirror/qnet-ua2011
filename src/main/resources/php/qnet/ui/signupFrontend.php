@@ -20,7 +20,7 @@ $validator = new Validator();
 $fieldErrors = $validator->validate();
 $validateCaptcha = $validator->validateCaptcha();
 
-if (empty($fieldErrors) && $validateCaptcha) {
+if ($validateCaptcha && empty($fieldErrors)) {
 
     $user = new User($_POST['userName'], $_POST['userLastName'], $_POST['password'], $_POST['day'] . '-' . $_POST['month'] . '-' . $_POST['year'], null, null, null, $_POST['institutionName'], null, null);
     User::readProperties($user, $_POST);
@@ -28,17 +28,20 @@ if (empty($fieldErrors) && $validateCaptcha) {
     $c->login($_POST['userName'], $_POST['password']);
     cleanSessionAfterLogin();
     header("Location: viewprofile.php");
-  //  header("Location: /Qnet/target/classes/php/qnet/ui/viewprofile.php");
+    //  header("Location: /Qnet/target/classes/php/qnet/ui/viewprofile.php");
 } else {
 
-    $_SESSION["completeForm"]=true;
-    $_SESSION["userName"]=$_POST["userName"];
-    $_SESSION["userLastName"]=$_POST["userLastName"];
-    $_SESSION["day"]=$_POST["day"];
-    $_SESSION["institutionName"]=$_POST['institutionName'];
-    $_SESSION["errors"]=$fieldErrors;
+    $_SESSION["completeForm"] = true;
+    $_SESSION["userName"] = $_POST["userName"];
+    $_SESSION["userLastName"] = $_POST["userLastName"];
+    $_SESSION["day"] = $_POST["day"];
+    $_SESSION["institutionName"] = $_POST['institutionName'];
+    if (!$validateCaptcha) {
+        array_push($fieldErrors, "Wrong Captcha");
+    }
+    $_SESSION["errors"] = $fieldErrors;
 
     header("Location: signup.php?error=true");
-   // header("Location: /Qnet/target/classes/php/qnet/ui/signup.php?error=true");
+    // header("Location: /Qnet/target/classes/php/qnet/ui/signup.php?error=true");
 }
 ?>
