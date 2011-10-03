@@ -19,9 +19,3 @@ if (!$header->isEmpty($header->getFollowers())) {
 
 
 }
-
-?>
-
-<?php echo '<li> <a href="followersRanking.php"> View Ranking </a> </li>'
-
-?>

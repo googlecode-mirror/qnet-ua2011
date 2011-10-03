@@ -28,29 +28,38 @@ $ranking = $trackingsDAO->getRanking();
 
             <table>
                 <table id="table" border="5">
-    <tr>
-        <th>Name</th>
-        <th>number of followers</th>
-    </tr>
+                    <tr>
+                        <th>Name</th>
+                        <th>number of followers</th>
+                    </tr>
 <?php
-    foreach ($ranking as $key => $value) {
-?>
+
+                    $count = 0;
+
+
+
+                    foreach ($ranking as $key => $value) {
+                        $count=$count + 1;
+                        if($count > 10){
+                            break; }
+                            ?>
+
 
     <tr>
         <td>
             <?php
         $name = $value["name"];
-        $lastname = $value["lastname"];
-        echo ($name . "," . $lastname);
-        ?>
-        </td>
-        <td>
-            <?php
-            echo $value["quantity"];
+            $lastname = $value["lastname"];
+            echo ($name . "," . $lastname);
             ?>
         </td>
+                        <td>
+            <?php
+            echo $value["quantity"];
+                ?>
+                        </td>
 
-<?php } ?>
+                        <?php  }?>
                 </table>
 
                 <!--        		--><?php
