@@ -9,7 +9,7 @@ class CommentDAO
 
     public function saveComment($qId, $uId, $text)
     {
-        $textAux = mysql_real_escape_string($text);
+        $textAux = $text;
 
         $connector = new DBConnector();
         $connection = $connector->createConnection();

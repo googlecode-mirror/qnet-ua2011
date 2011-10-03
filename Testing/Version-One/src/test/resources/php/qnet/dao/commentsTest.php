@@ -10,6 +10,7 @@ use Qnet\Dao\CommentDAO;
 $commentDao = new CommentDAO();
 $newCommentId = $commentDao->saveComment(1, 1, "test");
 $commentMap = $commentDao->loadAllComments(1);
+echo $commentMap;
 if ($commentMap[$newCommentId] == "test") {
     // ALL GOOD
 } else {
