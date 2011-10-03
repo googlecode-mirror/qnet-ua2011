@@ -11,19 +11,19 @@ $_SESSION["completeForm"]=true;
 
 echo "</br>";
 
- $completeForm = $_SESSION["completeForm"];
- $emptyValue = "";
- $defaultUserName = $emptyValue;
- $defaultUserLastName = $emptyValue;
- $DefaultInstitutionName = $emptyValue;
+$completeForm = $_SESSION["completeForm"];
+$emptyValue = "";
+$defaultUserName = $emptyValue;
+$defaultUserLastName = $emptyValue;
+$DefaultInstitutionName = $emptyValue;
 
 if ($completeForm) {
-     $defaultUserName = $_SESSION["userName"];
-     $defaultUserLastName = $_SESSION["userLastName"];
-     $DefaultInstitutionName = $_SESSION["institutionName"];
+    $defaultUserName = $_SESSION["userName"];
+    $defaultUserLastName = $_SESSION["userLastName"];
+    $DefaultInstitutionName = $_SESSION["institutionName"];
 }
 
- print_r($_SESSION["errors"]);
+print_r($_SESSION["errors"]);
 
 ?>
 
@@ -519,14 +519,14 @@ use Qnet\Model\User;
     <a href="#"
        onclick="document.getElementById('captcha').src = '../external/captcha/securimage_show.php?' + Math.random(); return false">[
         Refresh ]</a>
-<!--    <object type="application/x-shockwave-flash"-->
-<!--            data="../external/captcha/securimage_play.swf?audio=../external/captcha/securimage_play.php&amp;bgColor1=#fff&amp;bgColor2=#fff&amp;iconColor=#777&amp;borderWidth=1&amp;borderColor=#000"-->
-<!--            width="19" height="19">-->
-<!---->
-<!--        <param name="movie"-->
-<!--               value="../external/captcha/securimage_play.swf?audio=../external/captcha//securimage_play.php&amp;bgColor1=#fff&amp;bgColor2=#fff&amp;iconColor=#777&amp;borderWidth=1&amp;borderColor=#000"/>-->
-<!---->
-<!--    </object>-->
+    <!--    <object type="application/x-shockwave-flash"-->
+    <!--            data="../external/captcha/securimage_play.swf?audio=../external/captcha/securimage_play.php&amp;bgColor1=#fff&amp;bgColor2=#fff&amp;iconColor=#777&amp;borderWidth=1&amp;borderColor=#000"-->
+    <!--            width="19" height="19">-->
+    <!---->
+    <!--        <param name="movie"-->
+    <!--               value="../external/captcha/securimage_play.swf?audio=../external/captcha//securimage_play.php&amp;bgColor1=#fff&amp;bgColor2=#fff&amp;iconColor=#777&amp;borderWidth=1&amp;borderColor=#000"/>-->
+    <!---->
+    <!--    </object>-->
     <br/> <br/>
     <input type="text" name="captcha_code" size="10" maxlength="6"/>
 
