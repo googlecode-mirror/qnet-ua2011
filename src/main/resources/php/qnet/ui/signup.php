@@ -22,9 +22,9 @@ if ($completeForm) {
     $defaultUserLastName = $_SESSION["userLastName"];
     $DefaultInstitutionName = $_SESSION["institutionName"];
 }
-
+echo '<h2 class="title">';
 print_r($_SESSION["errors"]);
-
+echo '</h2>';
 ?>
 
 <div id="wrapper">
