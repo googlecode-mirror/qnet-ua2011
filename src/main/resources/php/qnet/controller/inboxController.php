@@ -18,7 +18,7 @@ class InboxController {
     private $messages;
 
     function __construct() {
-        $this->uid = /*getUID();*/getUsername();
+        $this->uid = getUID();//getUsername();
         $this->mdao = new MessageDAO();
         $this->messages = $this->mdao->getMessages($this->uid);
 /*        $this->message = $query['title'];

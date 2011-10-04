@@ -79,8 +79,9 @@ VALUE ($uid, '$user->birth','$user->gender','$user->maritalSt','$user->studies',
         $userLastNameAux = mysql_real_escape_string($userLastName);
 
 		$userName = strtok($userLastNameAux, " ");
-		$userLastName = strtok(" ");
-		$query = "SELECT * FROM users u WHERE u.alive=1 AND u.name='" . $userName .  "' AND u.lastname='" . $userLastNameAux . "'";
+		$userNameAux = mysql_real_escape_string($userName);
+        $userLastNameAux = strtok(" ");
+		$query = "SELECT * FROM users u WHERE u.alive=1 AND u.name='" . $userNameAux .  "' AND u.lastname='" . $userLastNameAux . "'";
 		$result = mysql_query($query) or die ("Error in query: $query. " . mysql_error());
 		if(!$result || mysql_num_rows($result) == 0){
 			return -1;
