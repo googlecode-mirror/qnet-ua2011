@@ -17,6 +17,7 @@ include "followers.php";
 
 echo '<li> <a href="followersRanking.php"> View Ranking </a> </li>';
 
+
 if($header->isOwnProfile()) {
     echo '<li>
                     <h2>Account Options</h2>

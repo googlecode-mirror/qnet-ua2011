@@ -28,20 +28,15 @@ $value = $results[0];
 $name = $value["name"];
 $lastname = $value["lastname"];
 $quantity = $value["quantity"];
-$correctname=$userDAO->selectUserById(9);
+$correctname = $userDAO->selectUserById(9);
 $correctname = $correctname->getName();
 
-if($name==$correctname ){
+if ($name == $correctname) {
 
 
-}  else{
+} else {
     echo ("the name doesn't match");
 
-
-
 }
-
-
-
 
 ?>
