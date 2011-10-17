@@ -41,10 +41,35 @@ if ($completeForm) {
     $default_religion = $_SESSION[User::$RELIGION];
 }
 echo '<h2 class="title">';
-if($_GET['error']) {
-    print_r($_SESSION["errors"]);
+if(!$_GET['error']) {
+    //print_r($_SESSION["errors"]);
+    $_SESSION["errors"] = array(); //$_SESSION["errors"];
 }
 echo '</h2>';
+
+function startsWithTag($haystack, $needle)
+{
+    $needle = $needle.":";
+    $length = strlen($needle);
+    return (substr($haystack, 0, $length) === $needle);
+}
+
+function removeTag($message, $tag)
+{
+    $tag = $tag.":";
+    $length = strlen($tag);
+    return substr($message, $length);
+}
+
+function field_errors($field) {
+
+    foreach (array_values($_SESSION["errors"]) as $message){
+        if(startsWithTag($message, $field)) {
+            echo "<div style='color:red'>- ".removeTag($message, $field)."</div>";
+        }
+    }
+}
+
 ?>
 
 
@@ -63,17 +88,21 @@ echo '</h2>';
                                                                         id="userName"
                                                                         value="<?php echo $defaultUserName;?>"/>
     </div>
+    <?php echo field_errors("userName")?>
     <div><label for="userLastName" class="mylabelstyle">Last name:</label><input type="text"
                                                                                  name="userLastName"
                                                                                  id="userLastName"
                                                                                  value="<?php echo $defaultUserLastName;?>"/>
     </div>
+    <?php echo field_errors("userLastName")?>
     <div><label for="password" class="mylabelstyle">Password:</label><input type="password" name="password"
                                                                             id="password"/></div>
+    <?php echo field_errors("password")?>
     <div><label for="rePassword" class="mylabelstyle">Retype Password:</label><input type="password"
                                                                                      name="rePassword"
                                                                                      id="rePassword"/>
     </div>
+    <?php echo field_errors("rePassword")?>
     <div><label class="mylabelstyle">Date of Birth:</label>
         <select name="year"><?php yearOptions($default_year, date('Y')); ?></select>
         <select name="month"><?php monthOptions($default_month); ?></select>
@@ -524,6 +553,7 @@ echo '</h2>';
     &nbsp; Yes, I accept the above Terms &amp; Conditions.
 
 </div>
+<?php echo field_errors("agreement")?>
 </fieldset>
 
 <fieldset>
@@ -543,7 +573,7 @@ echo '</h2>';
     <!--    </object>-->
     <br/> <br/>
     <input type="text" name="captcha_code" size="10" maxlength="6"/>
-
+    <?php echo field_errors("captcha")?>
 </fieldset>
 
 <div><input id="submitSignUpButton" class="summitQuery" type="submit"></div>
