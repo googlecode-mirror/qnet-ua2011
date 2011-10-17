@@ -16,15 +16,15 @@ class Validator
         $rules = array(); // stores the validation rules
 
         // standard form fields
-        $rules[] = "required,userName,This field is required.";
-        $rules[] = "required,userLastName,This field is required.";
+        $rules[] = "required,userName,userName:This field is required.";
+        $rules[] = "required,userLastName,userLastName:This field is required.";
         //$rules[] = "required,email,Please enter your email address.";
         //$rules[] = "valid_email,email,Please enter a valid email address.";
         //$rules[] = "is_alpha,userName,Please only enter letters (a-Z) in this field.";
-        $rules[] = "is_alpha,userName,User name alphanumeric field.";
-        $rules[] = "required,password,Please enter a password.";
-        $rules[] = "same_as,password,rePassword,Please ensure the passwords you enter are the same.";
-        $rules[] = "required,agreement,You didnt agree with the conditions of the application.";  
+        $rules[] = "is_alpha,userName,userName:User name alphanumeric field.";
+        $rules[] = "required,password,password:Please enter a password.";
+        $rules[] = "same_as,password,rePassword,rePassword:Please ensure the passwords you enter are the same.";
+        $rules[] = "required,agreement,agreement:You didnt agree with the conditions of the application.";
         $errors = validateFields($_POST, $rules);
 
         return $errors;

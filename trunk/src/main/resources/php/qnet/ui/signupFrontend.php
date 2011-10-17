@@ -47,7 +47,7 @@ if ($validateCaptcha && empty($fieldErrors)) {
 
 
     if (!$validateCaptcha) {
-        array_push($fieldErrors, "Wrong Captcha");
+        array_push($fieldErrors, "captcha:Wrong Captcha");
     }
     $_SESSION["errors"] = $fieldErrors;
 
