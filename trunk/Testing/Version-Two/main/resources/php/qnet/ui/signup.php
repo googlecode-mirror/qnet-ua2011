@@ -1,38 +1,52 @@
 <?php include "fragment/insecureHead.php"; ?>
 <body>
+<div id="wrapper">
 <?php
-/*
-$_SESSION["completeForm"]=true;
-    $_SESSION["userName"]=$_POST["userName"];
-    $_SESSION["userLastName"]=$_POST["userLastName"];
-    $_SESSION["day"]=$_POST["day"];
-*/
-
+    require_once dirname(__FILE__) . '\..\util.php';
+    require_model("User");
+    use Qnet\Model\User;
 
 echo "</br>";
 
-$completeForm = $_SESSION["completeForm"];
+$completeForm = $_GET['error'];
 $emptyValue = "";
 $defaultUserName = $emptyValue;
 $defaultUserLastName = $emptyValue;
 $DefaultInstitutionName = $emptyValue;
 
+$default_day = date('j');
+$default_month = date('n');
+$default_year = date('Y');
+
+$default_maritalSt = null;
+$default_gender = null;
+$default_studies = null;
+$default_country = null;
+$default_religion = null;
+
+
 if ($completeForm) {
     $defaultUserName = $_SESSION["userName"];
     $defaultUserLastName = $_SESSION["userLastName"];
     $DefaultInstitutionName = $_SESSION["institutionName"];
+
+    $default_day = $_SESSION["day"];
+    $default_month = $_SESSION["month"];
+    $default_year = $_SESSION["year"];
+
+    $default_gender = $_SESSION[User::$GENDER];
+    $default_maritalSt = $_SESSION[User::$MARITAL_STATUS];
+    $default_studies = $_SESSION[User::$STUDIES];
+    $default_country = $_SESSION[User::$LOCATION];
+    $default_religion = $_SESSION[User::$RELIGION];
 }
 echo '<h2 class="title">';
-print_r($_SESSION["errors"]);
+if($_GET['error']) {
+    print_r($_SESSION["errors"]);
+}
 echo '</h2>';
 ?>
 
-<div id="wrapper">
-<?php
-        require_once dirname(__FILE__) . '\..\util.php';
-require_model("User");
-use Qnet\Model\User;
-?>
 
 <div id="page">
 <div id="content">
@@ -61,21 +75,21 @@ use Qnet\Model\User;
                                                                                      id="rePassword"/>
     </div>
     <div><label class="mylabelstyle">Date of Birth:</label>
-        <select name="year"><?php yearOptions(date('Y')); ?></select>
-        <select name="month"><?php monthOptions(); ?></select>
-        <select name="day"><?php dayOptions(); ?></select>
+        <select name="year"><?php yearOptions($default_year, date('Y')); ?></select>
+        <select name="month"><?php monthOptions($default_month); ?></select>
+        <select name="day"><?php dayOptions($default_day); ?></select>
     </div>
     <div>
-        <?php User::printOptionsFor(User::$GENDER); ?>
+        <?php User::printOptionsFor(User::$GENDER, $default_gender); ?>
     </div>
     <div>
-        <?php User::printOptionsFor(User::$MARITAL_STATUS); ?>
+        <?php User::printOptionsFor(User::$MARITAL_STATUS, $default_maritalSt); ?>
     </div>
 </fieldset>
 <fieldset>
     <legend>Studies</legend>
     <div>
-        <?php User::printOptionsFor(User::$STUDIES); ?>
+        <?php User::printOptionsFor(User::$STUDIES, $default_studies); ?>
     </div>
     <div>
         <label class="mylabelstyle" for="institutionName">Institution name:</label>
@@ -86,10 +100,10 @@ use Qnet\Model\User;
 <fieldset>
     <legend>Other information</legend>
     <div>
-        <?php User::printOptionsFor(User::$LOCATION); ?>
+        <?php User::printOptionsFor(User::$LOCATION, $default_country); ?>
     </div>
     <div>
-        <?php User::printOptionsFor(User::$RELIGION); ?>
+        <?php User::printOptionsFor(User::$RELIGION, $default_religion); ?>
     </div>
 </fieldset>
 <fieldset id="termsArea">
@@ -543,31 +557,31 @@ use Qnet\Model\User;
 </html>
 
 <?php
-function yearOptions($endYear = '', $startYear = '1900')
+function yearOptions($date, $endYear = '', $startYear = '1900')
 {
     for ($i = $startYear; $i <= $endYear; $i++)
     {
-        ($i == date('Y')) ? $selected = ' selected="selected"' : $selected = '';
+        ($i == $date) ? $selected = ' selected="selected"' : $selected = '';
         echo '<option value="' . $i . '"' . $selected . '>' . $i . '</option>' . "\n";
     }
 }
 
-function monthOptions()
+function monthOptions($date)
 {
     $months = array(1 => "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December");
 
     foreach ($months as $monthNo => $month)
     {
-        ($monthNo == date('n')) ? $selected = ' selected="selected"' : $selected = '';
+        ($monthNo == $date) ? $selected = ' selected="selected"' : $selected = '';
         echo '<option value="' . $monthNo . '"' . $selected . '>' . $monthNo . ' - ' . $month . '</option>' . "\n";
     }
 }
 
-function dayOptions()
+function dayOptions($date)
 {
     for ($i = 1; $i <= 31; $i++)
     {
-        ($i == date('j')) ? $selected = ' selected="selected"' : $selected = '';
+        ($i == $date) ? $selected = ' selected="selected"' : $selected = '';
         echo '<option value="' . $i . '"' . $selected . '>' . $i . '</option>' . "\n";
     }
 }
