@@ -103,7 +103,7 @@ class User {
         }
     }
 
-    public static function printOptionsFor($property, $default) {
+    public static function printOptionsFor($property, $default = null) {
         echo '<label class="mylabelstyle">'.User::$PROPS_LABELS[$property].'</label>';
         User::_printOptionsFor($property, $default);
     }
