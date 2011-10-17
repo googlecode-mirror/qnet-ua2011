@@ -2,7 +2,7 @@
 <?php include "fragment/header.php"; ?>
 
 <?php
-        require_once dirname(__FILE__) . '\..\util.php';
+require_once dirname(__FILE__) . '\..\util.php';
 require_controller('profilecontroller');
 require_controller('photoController');
 require_dao('trackingsDAO');
@@ -33,18 +33,14 @@ $ranking = $trackingsDAO->getRanking();
                         <th>number of followers</th>
                     </tr>
 <?php
-
                     $count = 0;
 
-
-
                     foreach ($ranking as $key => $value) {
-                        $count=$count + 1;
-                        if($count > 10){
-                            break; }
-                            ?>
-
-
+                        $count = $count + 1;
+                        if ($count > 10) {
+                            break;
+                        }
+                        ?>
     <tr>
         <td>
             <?php
@@ -59,7 +55,7 @@ $ranking = $trackingsDAO->getRanking();
                 ?>
                         </td>
 
-                        <?php  }?>
+                        <?php }?>
                 </table>
 
                 <!--        		--><?php

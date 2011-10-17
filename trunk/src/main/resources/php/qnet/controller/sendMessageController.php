@@ -14,12 +14,23 @@ $udao= new UserDAO();
 $toUid = $udao->getUserIdByLastName($_POST['message_to']);
 $fromUid = $_POST['message_from'];
 
+$errors = array();
 
-if ($toUid<0 || empty($_POST['message_title'])){
+if ($toUid<0) {
+    $errors[] = "message_to:The field is empty or invalid";
+}
+if(empty($_POST['message_title'])) {
+    $errors[] = "message_title:This field is required";
+}
 
-
+if(!empty($errors)) {
+    $_SESSION['errors'] = $errors;
     $_SESSION['message_content']= $_POST['message_content'];
+    $_SESSION['message_to']= $_POST['message_to'];
+    $_SESSION['message_title']= $_POST['message_title'];
+
     header("Location: /Qnet/target/classes/php/qnet/ui/new_message.php?errors=true");
+
 
 }else {
     $mdao->sendMessage($fromUid, $toUid, $_POST['message_title'], $_POST['message_content']);
