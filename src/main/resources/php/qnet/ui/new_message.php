@@ -5,6 +5,8 @@
     <?php
         include "fragment/header.php";
     require_once dirname(__FILE__) . '\..\util.php';
+
+    $user = $_SESSION['uid'];
     ?>
 
     <link rel="stylesheet" type="text/css" href="qnet.css"/>
@@ -22,11 +24,9 @@
 
         To: <input type="text" name="message_to" id="searchUser1"><br/><br/>
         Title: <input type="text" name="message_title"><br/><br/>
+        <input name="message_from" type="text" value="<?php echo $user;?>" hidden="true">
         Message: <br/>
-        <textarea rows="10" cols="60" name="message_content"></textarea>
-    <?php
-                echo '<input type="hidden" name="message_from" value="' . $user . '"/><br/>';
-        ?>
+        <textarea rows="10" cols="60" name="message_content"> </textarea>
         <input class="button2" type="submit" value="Submit">
     </form>
 
