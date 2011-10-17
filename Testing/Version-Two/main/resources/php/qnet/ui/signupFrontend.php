@@ -35,7 +35,17 @@ if ($validateCaptcha && empty($fieldErrors)) {
     $_SESSION["userName"] = $_POST["userName"];
     $_SESSION["userLastName"] = $_POST["userLastName"];
     $_SESSION["day"] = $_POST["day"];
+    $_SESSION["month"] = $_POST["month"];
+    $_SESSION["year"] = $_POST['year'];
     $_SESSION["institutionName"] = $_POST['institutionName'];
+
+    $_SESSION[User::$GENDER] = $_POST[User::$GENDER];
+    $_SESSION[User::$MARITAL_STATUS] = $_POST[User::$MARITAL_STATUS];
+    $_SESSION[User::$STUDIES] = $_POST[User::$STUDIES];
+    $_SESSION[User::$LOCATION] = $_POST[User::$LOCATION];
+    $_SESSION[User::$RELIGION] = $_POST[User::$RELIGION];
+
+
     if (!$validateCaptcha) {
         array_push($fieldErrors, "Wrong Captcha");
     }
