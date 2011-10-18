@@ -22,7 +22,8 @@ function getNextDate($phpdate) {
 
 function insertUser($id, $name, $lastName, $password, $alive,
                 $dateOfBirth,$gender,$maritalSt,$studies,$institution,$location,$religion,$photo) {
-    $user = "INSERT INTO users (id,name,lastName,password,alive) VALUES ($id,'$name','$lastName','$password',$alive);";
+    $mail = $name."_".$lastName."@mailinator.com";
+    $user = "INSERT INTO users (id,name,lastName,mail,password,alive) VALUES ($id,'$name','$lastName','$mail','$password',$alive);";
     mysql_query($user) or die ("Error in query: $user. " . mysql_error());
     $userinfo = "INSERT INTO userinfo (FK_users, dateOfBirth, gender, maritalSt, studies, InstitutionName, currentLocation, religion, photo)
     VALUE ($id, '$dateOfBirth','$gender','$maritalSt','$studies','$institution','$location','$religion', '$photo');";
@@ -39,6 +40,7 @@ insertUser(7, 'Martin', 'Sanchez', 'ms', 1, '20-11-1990','Male', 'Single', 'Univ
 insertUser(8, 'Pablo', 'Celentano', 'pc', 1, '20-11-1990','Male', 'Single', 'University', 'UA', 'Argentina', 'Catholic', 'img08');
 insertUser(9, 'Jorge', 'Gonzales', 'jg', 1, '20-11-1990','Male', 'Single', 'University', 'UA', 'Argentina', 'Catholic', 'img08');
 insertUser(10, 'Pedro', 'Sorio', 'ps', 1, '20-11-1990','Male', 'Single', 'University', 'UA', 'Argentina', 'Catholic', 'img08');
+
 
 // Insert query
 

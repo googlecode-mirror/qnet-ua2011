@@ -160,6 +160,7 @@ class User {
     public $id;
     public $name;
     public $lastName;
+    public $mail;
     public $password;
     public $birth;
     public $gender;
@@ -225,9 +226,10 @@ class User {
         $this->password = $password;
     }
 
-    function __construct($name, $lastName, $password, $birth, $gender, $maritalSt, $studies, $InstitutionName, $country, $religion, $photo='img08', $alive = 1) {
+    function __construct($name, $lastName, $mail, $password, $birth, $gender, $maritalSt, $studies, $InstitutionName, $country, $religion, $photo='img08', $alive = 1) {
         $this->name = $name;
         $this->lastName = $lastName;
+        $this->mail = $mail;
         $this->password = $password;
         $this->birth = $birth;
         $this->gender = $gender;

@@ -19,6 +19,7 @@ $users = "CREATE TABLE  `qnet`.`users` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `name` varchar(45) NOT NULL,
   `lastname` varchar(45) NOT NULL,
+  `mail` varchar(45) NOT NULL,
   `password` varchar(45) NOT NULL,
   `alive` tinyint(1) NOT NULL,
   PRIMARY KEY (`id`)
