@@ -19,10 +19,14 @@ $validator = new Validator();
 
 $fieldErrors = $validator->validate();
 $validateCaptcha = $validator->validateCaptcha();
+if($dao->getUserIdByMail($_POST['mail'] != -1)){
+    array_push($fieldErrors, "mail:Mail Already Exits");
+}
+
 
 if ($validateCaptcha && empty($fieldErrors)) {
 
-    $user = new User($_POST['userName'], $_POST['userLastName'], $_POST['password'], $_POST['day'] . '-' . $_POST['month'] . '-' . $_POST['year'], null, null, null, $_POST['institutionName'], null, null);
+    $user = new User($_POST['userName'], $_POST['userLastName'], $_POST['mail'], $_POST['password'], $_POST['day'] . '-' . $_POST['month'] . '-' . $_POST['year'], null, null, null, $_POST['institutionName'], null, null);
     User::readProperties($user, $_POST);
     $dao->registerUser($user);
     $c->login($_POST['userName'], $_POST['password']);
@@ -34,6 +38,7 @@ if ($validateCaptcha && empty($fieldErrors)) {
     $_SESSION["completeForm"] = true;
     $_SESSION["userName"] = $_POST["userName"];
     $_SESSION["userLastName"] = $_POST["userLastName"];
+    $_SESSION["mail"] = $_POST["mail"];
     $_SESSION["day"] = $_POST["day"];
     $_SESSION["month"] = $_POST["month"];
     $_SESSION["year"] = $_POST['year'];

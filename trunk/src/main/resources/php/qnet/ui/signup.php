@@ -3,8 +3,8 @@
 <div id="wrapper">
 <?php
     require_once dirname(__FILE__) . '\..\util.php';
-    require_model("User");
-    use Qnet\Model\User;
+require_model("User");
+use Qnet\Model\User;
 
 echo "</br>";
 
@@ -28,6 +28,7 @@ $default_religion = null;
 if ($completeForm) {
     $defaultUserName = $_SESSION["userName"];
     $defaultUserLastName = $_SESSION["userLastName"];
+    $defaultMail = $_SESSION["mail"];
     $DefaultInstitutionName = $_SESSION["institutionName"];
 
     $default_day = $_SESSION["day"];
@@ -41,7 +42,7 @@ if ($completeForm) {
     $default_religion = $_SESSION[User::$RELIGION];
 }
 echo '<h2 class="title">';
-if(!$_GET['error']) {
+if (!$_GET['error']) {
     //print_r($_SESSION["errors"]);
     $_SESSION["errors"] = array(); //$_SESSION["errors"];
 }
@@ -49,23 +50,24 @@ echo '</h2>';
 
 function startsWithTag($haystack, $needle)
 {
-    $needle = $needle.":";
+    $needle = $needle . ":";
     $length = strlen($needle);
     return (substr($haystack, 0, $length) === $needle);
 }
 
 function removeTag($message, $tag)
 {
-    $tag = $tag.":";
+    $tag = $tag . ":";
     $length = strlen($tag);
     return substr($message, $length);
 }
 
-function field_errors($field) {
+function field_errors($field)
+{
 
-    foreach (array_values($_SESSION["errors"]) as $message){
-        if(startsWithTag($message, $field)) {
-            echo "<div style='color:red'>- ".removeTag($message, $field)."</div>";
+    foreach (array_values($_SESSION["errors"]) as $message) {
+        if (startsWithTag($message, $field)) {
+            echo "<div style='color:red'>- " . removeTag($message, $field) . "</div>";
         }
     }
 }
@@ -103,6 +105,18 @@ function field_errors($field) {
                                                                                      id="rePassword"/>
     </div>
     <?php echo field_errors("rePassword")?>
+
+    <div><label for="mail" class="mylabelstyle">Mail:</label><input type="email" name="mail"
+                                                                    id="mail"
+                                                                    value="<?php echo $defaultMail;?>"/></div>
+    <?php echo field_errors("mail")?>
+
+    <div><label for="reMail" class="mylabelstyle">Retype Mail:</label><input type="email"
+                                                                             name="reMail"
+                                                                             id="reMail"/>
+    </div>
+    <?php echo field_errors("reMail")?>
+
     <div><label class="mylabelstyle">Date of Birth:</label>
         <select name="year"><?php yearOptions($default_year, date('Y')); ?></select>
         <select name="month"><?php monthOptions($default_month); ?></select>

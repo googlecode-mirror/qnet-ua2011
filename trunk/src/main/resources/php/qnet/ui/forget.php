@@ -23,46 +23,28 @@ if ($session->isLoggedIn()) {
 </head>
 
 <body>
-<form action="loginFrontend.php" method="post">
+<form action="forgetFrontend.php" method="post">
 
     <fieldset>
 
-        <legend>Log in</legend>
-
-        <label for="userName">User </label>
-        <input type="text" name="userName" id="userName"/>
-
+        <legend>Recover Pass</legend>
         <div class="clear"></div>
+        <label for="mail">Put the email that enter when your create your account </label>
 
-        <label for="userPass">Password </label>
-        <input type="password" name="userPass" id="userPass"/>
 
-        <div class="clear"></div>
-
-        <label for="remember_me" style="padding: 0;">
-            <a href="signup.php"> Sing up</a>
-        </label>
-
-        <label for="remember_me" style="padding: 0;">
-            <a href="forget.php"> Forget Pass</a>
-
-        </label>
+        <label for="mail">Email </label>
+        <input type="mail" name="mail" id="mail"/>
 
 
         <div class="clear"></div>
 
         <br/>
 
-        <input type="submit" style="margin: -20px 0 0 287px;" class="button" name="commit" value="Log In"/>
+        <input type="submit" style="margin: -20px 0 0 287px;" class="button" name="commit" value="Recover"/>
     </fieldset>
 <?php
     if ($_GET['error'] == 'true') {
-    echo '<p>Incorrect user and/or password! Try once more!';
-}
-    ?>
-<?php
-    if ($_GET['expired'] == 'true') {
-    echo '<p>Your session has expired. Please log in again.';
+    echo '<br></label><p>The email that your enter is not on the database!';
 }
     ?>
 <?php
@@ -70,6 +52,7 @@ if ($session->isLoggedIn()) {
     echo '<br></label><p>An email was send with your User and Password.';
 }
     ?>
+
 </form>
 
 

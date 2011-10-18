@@ -18,8 +18,10 @@ class Validator
         // standard form fields
         $rules[] = "required,userName,userName:This field is required.";
         $rules[] = "required,userLastName,userLastName:This field is required.";
-        //$rules[] = "required,email,Please enter your email address.";
-        //$rules[]| = "valid_email,email,Please enter a valid email address.";
+        $rules[] = "required,mail,mail:Please enter your email address.";
+        $rules[] = "valid_email,mail,mail:Please enter a valid email address.";
+        $rules[] = "same_as,mail,reMail,reMail:Please enter a valid email address.";
+
         //$rules[] = "is_alpha,userName,Please only enter letters (a-Z) in this field.";
         $rules[] = "is_alpha,userName,userName:User name alphanumeric field.";
         $rules[] = "required,password,password:Please enter a password.";
