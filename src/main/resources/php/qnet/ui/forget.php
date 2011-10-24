@@ -44,7 +44,7 @@ if ($session->isLoggedIn()) {
     </fieldset>
 <?php
     if ($_GET['error'] == 'true') {
-    echo '<br></label><p>The email that your enter is not on the database!';
+    echo '<br></label><p>The email that your enter is not valid or is not on the database!';
 }
     ?>
 <?php
