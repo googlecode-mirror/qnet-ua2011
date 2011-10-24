@@ -1,11 +1,27 @@
 <!-- Ant file to copy the sources from destination to deploy location-->
 <project>
-	<property name="origin" location="D:\mis_docs\facu_2011\dir_proyectos\qnet-ua2011\src\main\resources"/>
-	<property name="destination" location="D:\soft_seven\xammp\xampplite\htdocs\Qnet\target\classes"/>
+	<property name="origin" location="C:\xampp\htdocs\Qnet\src\main\resources"/>
+	<property name="origin_testing" location="C:\xampp\htdocs\Qnet\src\test"/>
+	<property name="destination" location="C:\xampp\htdocs\Qnet\target\classes"/>
+	<property name="copy_destination" location="C:\testing"/>
 	<target name="deploy">
 		<copy todir="${destination}" verbose="true">
 			<fileset dir="${origin}">
 			</fileset>	
+		</copy>
+	</target>
+	<target name="copy_testing">
+		<copy todir="${copy_destination}" verbose="true">
+			<fileset dir="${origin}">
+			  	<exclude name="**/*.svn"/>
+			</fileset>
+		</copy>
+	</target>
+	<target name="copy_testing1">
+		<copy todir="C:\testing\testing2" verbose="true">
+			<fileset dir="C:\xampp\htdocs\Qnet\src\test">
+			  	<exclude name="**/*.svn"/>
+			</fileset>
 		</copy>
 	</target>
 </project>
