@@ -1,30 +1,21 @@
-
-
 <?php
 
-include_once  ("../external/mailer/swift_required.php");
-include_once  ("../util/MailSender.php");
+namespace Qnet\Controller;
+require_once dirname(__FILE__) . '\..\util.php';
 
-/*
-    $transport = Swift_SmtpTransport::newInstance('smtp.gmail.com')
-      ->setPort(465)
-      ->setEncryption('ssl')
-      ->setUsername('qnetaustral@gmail.com')
-      ->setPassword('qnetpass')
-      ;
+require_service("mailer/swift_required");
+require_service("MailSender");
+use Qnet\Service\MailSender;
 
-    $mailer = Swift_Mailer::newInstance($transport);
+       $subject = "Join Qnet!";
+       $content = "Sent you an invitation to join Qnet, the best Query networking site! http://localhost/Qnet/target/classes/php/qnet";
+       $to = $_POST['friend_mail'];
 
-    $message = Swift_Message::newInstance('Test')
-      ->setFrom(array('damianminniti@gmail.com' => 'From mr. 007'))
-      ->setTo(array('damianminniti@gmail.com', 'damianminniti@gmail.com' => 'To mr. 007'))
-      ->setBody('Body')
-      ;
-
-    $result = $mailer->send($message);
-  */
 
       $mailSender=new MailSender();
-      $mailSender->sendMail("qnet","qnetaustral@gmail.com","Content","subject");
+      $mailSender->sendMail("recommend@qnet.com",$to,$content,$subject);
+
+    header("Location: /Qnet/target/classes/php/qnet/ui/viewprofile.php?recommend=ok");
+
 
 ?>
