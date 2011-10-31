@@ -49,7 +49,9 @@ class InboxReadController
     {
         $this->udao = new UserDAO();
         $name = $this->udao->selectUserById($this->message['from'])->getName();
-        return $name;
+        $lastname = $this->udao->selectUserById($this->message['from'])->getLastName();
+
+        return $name." ".$lastname;
     }
 
     public function getContent()
