@@ -66,7 +66,7 @@ $photoPath=$photoController->getPhoto();
                 ?>
 
                     <p>
-                    <form action="bridge.php?target=querycontroller" method="POST">
+                    <form action="bridge.php?target=querycontroller"  id="createQueryForm" method="POST">
                         <input type="hidden" name="qlength" value="0" id="qlength">
                         <input type="hidden" name="filterslength" value="0" id="filterslength">
                         <fieldset>
