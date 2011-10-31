@@ -19,7 +19,7 @@ $validator = new Validator();
 
 $fieldErrors = $validator->validate();
 $validateCaptcha = $validator->validateCaptcha();
-if($dao->getUserIdByMail($_POST['mail'] != -1)){
+if($dao->getUserIdByMail($_POST['mail'] ) > 0){
     array_push($fieldErrors, "mail:Mail Already Exits");
 }
 
