@@ -195,6 +195,7 @@ $messages_var = "CREATE TABLE `qnet`.`messages` (
   `message_title` varchar(65) NOT NULL,
   `message_contents` longtext NOT NULL,
   `message_read` int(11) NOT NULL default '0',
+  `date` datetime NOT NULL,
   PRIMARY KEY  (`message_id`)
   ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3;";
 mysql_query($messages_var) or die ("Error in query: $messages_var. " . mysql_error());

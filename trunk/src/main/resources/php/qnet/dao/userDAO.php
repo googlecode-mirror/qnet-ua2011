@@ -14,7 +14,7 @@ class UserDAO
         $connector = new DBConnector();
         $connection = $connector->createConnection();
 
-        $query = 'SELECT name, lastname, password, alive FROM users u WHERE u.alive=1 AND u.id=' . $userId;
+        $query = 'SELECT name, lastname, password, mail, alive FROM users u WHERE u.alive=1 AND u.id=' . $userId;
         $result = mysql_query($query) or die ("Error in query: $query. " . mysql_error());
         if (!$result || mysql_num_rows($result) == 0) {
             return false;
@@ -23,13 +23,14 @@ class UserDAO
         $name = $data['name'];
         $lastname = $data['lastname'];
         $password = $data['password'];
+        $mail = $data['mail'];
         $alive = $data['alive'];
         mysql_free_result($result);
         $id = intval($userId);
         $query = 'SELECT * FROM userinfo u WHERE u.FK_users=' . $userId;
         $result = mysql_query($query) or die ("Error in query: $query. " . mysql_error());
         $data = mysql_fetch_row($result);
-        $user = new User($name, $lastname, $password, $data[2], $data[3], $data[4], $data[5], $data[6], $data[7], $data[8], $data[9], $alive);
+        $user = new User($name, $lastname, $mail, $password, $data[2], $data[3], $data[4], $data[5], $data[6], $data[7], $data[8], $data[9], $alive);
         $user->setId($id);
         mysql_free_result($result);
         mysql_close($connection);
