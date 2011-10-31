@@ -124,15 +124,15 @@ VALUE ($uid, '$user->birth','$user->gender','$user->maritalSt','$user->studies',
 
         $query = 'SELECT name,lastname FROM users u WHERE u.alive=1 AND u.name LIKE "' . $partialNameAux . '%"';
         $result = mysql_query($query);
-        if (mysql_num_rows($result) == 0) {
-            return -1;
-        }
         $answer = array();
-        $i = 0;
-        while ($row = mysql_fetch_row($result)) {
-            $answer[$i] = $row[0] . " " . $row[1];
-            $i++;
+        if (mysql_num_rows($result) != 0) {
+            $i = 0;
+            while ($row = mysql_fetch_row($result)) {
+                $answer[$i] = $row[0] . " " . $row[1];
+                $i++;
+            }
         }
+
         mysql_free_result($result);
         mysql_close($connection);
 
