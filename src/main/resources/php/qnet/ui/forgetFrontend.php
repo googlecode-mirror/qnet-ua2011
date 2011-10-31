@@ -2,6 +2,8 @@
 include_once dirname(__FILE__) . '\..\util.php';
 require_controller("forgetController");
 
+use Qnet\Controller\ForgetController;
+
 $c = new ForgetController();
 $uid = $c->recover($_POST['mail']);
 if ($uid != -1) {

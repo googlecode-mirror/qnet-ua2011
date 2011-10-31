@@ -14,13 +14,14 @@ class messageDAO
         $result = mysql_query("SELECT * FROM messages WHERE to_user='$uId' ORDER BY message_id DESC") or die(mysql_error());
 
         $ans = array();
-        $index=0;
-        while($row = mysql_fetch_assoc($result)) {
-            $tempResult=array();
-            $tempResult["id"] = $row["message_id"];;
-            $tempResult["title"]=$row["message_title"];
-            $tempResult["read"]=$row["message_read"];
-            $ans[$index]=$tempResult;
+        $index = 0;
+        while ($row = mysql_fetch_assoc($result)) {
+            $tempResult = array();
+            $tempResult["id"] = $row["message_id"];
+            $tempResult["title"] = $row["message_title"];
+            $tempResult["date"] = $row["date"];
+            $tempResult["read"] = $row["message_read"];
+            $ans[$index] = $tempResult;
             $index++;
         }
 
@@ -29,17 +30,19 @@ class messageDAO
         return $ans;
     }
 
-    public function sendMessage($uid, $toUid, $title, $msg) {
+    public function sendMessage($uid, $toUid, $title, $msg)
+    {
         $connector = new DBConnector();
         $connection = $connector->createConnection();
-
-        mysql_query("INSERT INTO messages (from_user, to_user, message_title, message_contents) VALUES ('$uid','$toUid','$title','$msg')") OR die("Could not send the message: <br>" . mysql_error());
+        $date = date('Y-m-d H:i:s');
+        mysql_query("INSERT INTO messages (from_user, to_user, message_title, message_contents, date ) VALUES ('$uid','$toUid','$title','$msg','$date')") OR die("Could not send the message: <br>" . mysql_error());
         $mid = mysql_insert_id();
         mysql_close($connection);
         return $mid;
     }
 
-    public function markAsRead($mid) {
+    public function markAsRead($mid)
+    {
         $connector = new DBConnector();
         $connection = $connector->createConnection();
         mysql_query("UPDATE messages SET message_read = 1 WHERE message_id = '$mid'");
@@ -47,7 +50,8 @@ class messageDAO
         mysql_close($connection);
     }
 
-    public function getMessage($mid) {
+    public function getMessage($mid)
+    {
         $connector = new DBConnector();
         $connection = $connector->createConnection();
         $result = mysql_query("SELECT * FROM messages WHERE message_id = '$mid'");

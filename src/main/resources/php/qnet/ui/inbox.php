@@ -14,9 +14,12 @@
     while ($controller->hasMoreMessages())
     {
         $controller->nextMessage();
-        echo '<a href="read_message.php?messageid=' . $controller->getMid() . '">' . $controller->getTitle() . '</a>';
+        $date = $controller->getDate().'';
+        $date = substr($date,0,10);
+        echo $date.' ';
+        echo '<a href="read_message.php?messageid=' . $controller->getMid() . '">'   . $controller->getTitle() .   '</a>';
         if (!$controller->isRead()) {
-            echo '(New)';
+            echo '    (New)';
         }
         echo '<br/>';
     }

@@ -21,10 +21,7 @@ class InboxController {
         $this->uid = getUID();//getUsername();
         $this->mdao = new MessageDAO();
         $this->messages = $this->mdao->getMessages($this->uid);
-/*        $this->message = $query['title'];
-        $this->quid = $query['uid'];
-        $this->questions = $this->qdao->getQuestionsByQueryId($this->qid);
-        $this->questionIx = -1;*/
+
     }
 
     public function hasMoreMessages() {
@@ -46,6 +43,10 @@ class InboxController {
 
     public function isRead() {
         return $this->message['read'] == 1;
+    }
+
+    public function getDate(){
+        return $this->message['date'];
     }
 }
 ?>
