@@ -40,7 +40,7 @@ if ($session->isLoggedIn()) {
         <div class="clear"></div>
 
         <label for="remember_me" style="padding: 0;">
-            <a href="signup.php"> Sing up</a>
+            <a href="signup.php"> Sign up</a>
         </label>
 
         <label for="remember_me" style="padding: 0;">
