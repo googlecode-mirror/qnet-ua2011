@@ -61,7 +61,10 @@ $photoPath=$photoController->getPhoto();
                 <?php
                     if($_GET['commit']=='ok') {
                         echo
-                        '<p>Congratulations! Your query has been published.<p>';
+                        '<p>Congratulations! Your query has been published.</p>';
+                    } else if($_GET['commit']=='error') {
+                        echo
+                        '<p>The query could&#39;t be published because some fields were empty&#33;</p>';
                     }
                 ?>
 
