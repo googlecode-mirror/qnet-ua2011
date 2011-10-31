@@ -151,11 +151,11 @@ VALUE ($uid, '$user->birth','$user->gender','$user->maritalSt','$user->studies',
         $result = mysql_query($query) or die ("Error in query: $query. " . mysql_error());
 
         if (mysql_num_rows($result) == 0) {
-            return -1;
+            $uid = -1;
+        } else {
+            $row = mysql_fetch_row($result);
+            $uid = $row[0];
         }
-
-        $row = mysql_fetch_row($result);
-        $uid = $row[0];
         mysql_free_result($result);
         mysql_close($connection);
         return $uid;
