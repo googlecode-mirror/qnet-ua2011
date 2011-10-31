@@ -3,8 +3,10 @@
 
 <div id="wrapper">
     <?php
-        include "fragment/header.php";
+            include "fragment/header.php";
     require_once dirname(__FILE__) . '\..\util.php';
+
+
 
     $user = $_SESSION['uid'];
 
@@ -15,28 +17,30 @@
 
     function startsWithTag($haystack, $needle)
     {
-        $needle = $needle.":";
+        $needle = $needle . ":";
         $length = strlen($needle);
         return (substr($haystack, 0, $length) === $needle);
     }
 
     function removeTag($message, $tag)
     {
-        $tag = $tag.":";
+        $tag = $tag . ":";
         $length = strlen($tag);
         return substr($message, $length);
     }
 
-    function field_errors($field) {
+    function field_errors($field)
+    {
 
-        foreach (array_values($_SESSION["errors"]) as $message){
-            if(startsWithTag($message, $field)) {
-                echo "<div style='color:red'>- ".removeTag($message, $field)."</div>";
+        foreach (array_values($_SESSION["errors"]) as $message) {
+            if (startsWithTag($message, $field)) {
+                echo "<div style='color:red'>- " . removeTag($message, $field) . "</div>";
             }
         }
     }
 
-    if(!$_GET['errors']) {
+    if (!$_GET['errors']) {
+
         $_SESSION["errors"] = array();
     } else {
         $defaultMessageTitle = $_SESSION['message_title'];
@@ -44,6 +48,16 @@
         $defaultMessageTo = $_SESSION['message_to'];
     }
 
+
+    if ($_GET['reply']) {
+        $defaultMessageTitle = "Re: " . $_SESSION['message_title'];
+        $defaultMessageContent = "--------- Previous Message ---------
+" . $_SESSION['message_content'] . "
+------------- Message ---------------";
+        $defaultMessageTo = $_SESSION['message_to'];
+    }
+
+//    unset($_SESSION["message_title"]);
     ?>
 
     <link rel="stylesheet" type="text/css" href="qnet.css"/>
