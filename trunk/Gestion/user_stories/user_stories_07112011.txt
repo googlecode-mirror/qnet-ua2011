@@ -1,0 +1,11 @@
+User stories:
+
+Answer message:
+
+The user clicks on the button "reply message" button in the inbox . And sees
+the ui to create a new message where the title is :"Re:Before title". 
+And the message contains the previous body.
+
+Message date : 
+
+Now the messages have date so the user can see the date of them .
