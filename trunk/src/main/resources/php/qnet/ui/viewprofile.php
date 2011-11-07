@@ -12,6 +12,7 @@
         $hasError=$_GET['error'];
         //$message=$photoController->getMessage($hasError);
     ?>
+
 <body >
 <div id="wrapper">
     <div id="page">
