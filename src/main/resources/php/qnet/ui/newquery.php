@@ -20,7 +20,7 @@ $photoPath=$photoController->getPhoto();
         <fieldset>
             <div>
                 <label  class="mylabelstyle" for="questionnameX">Question:</label>
-                <input type="text" name="questionnameX" id="questionnameX" required pattern="/[a-zA-Z0-9]+/"/>
+                <input type="text" name="questionnameX" id="questionnameX" required/>
             </div>
 
             <div>
@@ -74,7 +74,7 @@ $photoPath=$photoController->getPhoto();
                         <input type="hidden" name="filterslength" value="0" id="filterslength">
                         <fieldset>
                             <legend>Query information</legend>
-                            <label  class="mylabelstyle" for="queryname">Title</label><input type="text" name="queryname" id="queryname" required pattern="/[a-zA-Z0-9\s]+/"/>
+                            <label  class="mylabelstyle" for="queryname">Title</label><input type="text" name="queryname" id="queryname" required/>
                         </fieldset>
                         <fieldset id="boxesTarget">
                             <legend>Questions</legend>
