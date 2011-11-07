@@ -42,24 +42,24 @@
                             <div><label for="userName" class="mylabelstyle">Name:</label><input type="text"
                                                                                                 name="userName"
                                                                                                 id="userName"
-                                                                                                value="<?php echo $username; ?>" required/>
+                                                                                                value="<?php echo $username; ?>"
+                                                                                                required/>
                             </div>
                             <div><label for="userLasName" class="mylabelstyle">Last name:</label><input type="text"
                                                                                                         name="userLastName"
                                                                                                         id="userLasName"
-                                                                                                        value="<?php echo $lastName; ?>" required/>
+                                                                                                        value="<?php echo $lastName; ?>"
+                                                                                                        required/>
                             </div>
                             <div><label for="password" class="mylabelstyle">Password:</label>
                                 <input type="password" name="password"
                                        id="password"
-                                       value="<?php echo $userPassword; ?>"
-                                        /></div>
+                                       value="<?php echo $userPassword; ?>" required/></div>
                             <div><label for="rePassword" class="mylabelstyle">Retype Password:</label>
                                 <input type="password"
                                        name="rePassword"
                                        id="rePassword"
-                                       value="<?php echo $userPassword; ?>"
-                                        />
+                                       value="<?php echo $userPassword; ?>" required/>
                             </div>
                             <div>
                                 <?php User::printOptionsFor(User::$GENDER, $gender); ?>

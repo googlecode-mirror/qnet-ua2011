@@ -13,6 +13,8 @@ namespace Qnet\Controller;
 
     $modifyUserController = new ModifyUserController();
     $modifyUserController->modifyUser();
+    header("Location: /Qnet/target/classes/php/qnet/ui/viewprofile.php");
+
 
     class ModifyUserController {
         public function modifyUser() {
@@ -35,11 +37,7 @@ namespace Qnet\Controller;
             $user->setInstitutionName($_POST['InstitutionName']);
 
             $userDao->updateUser($user, $uid);
-            $userInfoDao->modifyUserInfo($id,$user);
-
-
-
-            
+            $userInfoDao->modifyUserInfo($uid,$user);
 
         }
     }
