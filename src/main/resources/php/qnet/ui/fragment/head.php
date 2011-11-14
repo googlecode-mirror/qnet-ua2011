@@ -14,7 +14,7 @@ echo '<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
 <script type="text/javascript" src="autocomplete.js"></script>
 <script type="text/javascript">
     $(function(){
-        $("#searchQuery").autocomplete("bridge.php?target=search/querySuggestionController",{autoFill: true});
+//        $("#searchQuery").autocomplete("bridge.php?target=search/querySuggestionController",{autoFill: true});
     });
     $(function(){
         $("#searchUser").autocomplete("bridge.php?target=search/userSuggestionController",{autoFill: true});

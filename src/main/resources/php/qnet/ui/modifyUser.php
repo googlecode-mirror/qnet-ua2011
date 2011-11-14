@@ -55,12 +55,12 @@
                                 <input type="password" name="password"
                                        id="password"
                                        value="<?php echo $userPassword; ?>" required/></div>
-                            <div><label for="rePassword" class="mylabelstyle">Retype Password:</label>
-                                <input type="password"
-                                       name="rePassword"
-                                       id="rePassword"
-                                       value="<?php echo $userPassword; ?>" required/>
-                            </div>
+<!--                            <div><label for="rePassword" class="mylabelstyle">Retype Password:</label>-->
+<!--                                <input type="password"-->
+<!--                                       name="rePassword"-->
+<!--                                       id="rePassword"-->
+<!--                                       value="--><?php //echo $userPassword; ?><!--" required/>-->
+<!--                            </div>-->
                             <div>
                                 <?php User::printOptionsFor(User::$GENDER, $gender); ?>
                             </div>
